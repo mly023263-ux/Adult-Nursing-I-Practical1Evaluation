@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adult Nursing I — Practical Evaluation | Prepared by Mr. Mahmoud Ali</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans (English) & Cairo (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Cairo"', 'sans-serif'],
+            en: ['"Plus Jakarta Sans"', 'sans-serif'],
+            ar: ['"Cairo"', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Prominent Glowing Shimmer Signature: "Prepared by Mr. Mahmoud Ali" */
+    .signature-badge {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 22px rgba(56, 189, 248, 0.45), 0 0 40px rgba(250, 204, 21, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .signature-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.65), 0 0 48px rgba(250, 204, 21, 0.35);
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #38BDF8, #FDE047, #FFFFFF, #38BDF8);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+    @keyframes shine {
+      0% { background-position: 0% center; }
+      100% { background-position: 250% center; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.85; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    .sparkle-glow {
+      animation: pulseGlow 2.4s ease-in-out infinite;
+      filter: drop-shadow(0 0 6px rgba(253, 224, 71, 0.85));
+    }
+
+    /* Active Recall Blur */
+    .recall-blur {
+      filter: blur(6px);
+      user-select: none;
+      cursor: pointer;
+      transition: filter 0.25s ease;
+    }
+    .recall-blur:hover,
+    .recall-blur.revealed {
+      filter: blur(0);
+      user-select: auto;
+    }
+
+    /* Hide scrollbar for clean horizontal procedure pill bar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Smooth section transition */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade {
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-sky-100 selection:text-sky-900">
+
+  <!-- ======================================================================= -->
+  <!-- SINGLE CLEAN MAIN HEADER                                                -->
+  <!-- ======================================================================= -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-[1040px] mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <!-- Left: Course Title & Institution -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-sky-50 border border-sky-200/80 flex items-center justify-center text-sky-600 shrink-0">
+          <i data-lucide="stethoscope" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h1 class="font-en text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-snug">
+            Adult Nursing I — Practical Evaluation
+          </h1>
+          <p class="font-en text-xs font-medium text-slate-500 mt-0.5">
+            Faculty of Nursing, Assiut University • 2026–2027
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Prominent Glowing Signature Badge -->
+      <div class="self-start sm:self-auto">
+        <div class="signature-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-300 sparkle-glow shrink-0"></i>
+          <span class="font-en text-xs sm:text-sm font-extrabold tracking-wide shimmer-text">
+            Prepared by Mr. Mahmoud Ali
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================= -->
+  <!-- MAIN CONTENT CONTAINER (Centered 1040px, Spacious & Uncluttered)        -->
+  <!-- ======================================================================= -->
+  <main class="flex-1 max-w-[1040px] w-full mx-auto px-4 sm:px-6 py-7 sm:py-9 space-y-7">
+
+    <!-- 3 Clean Pill Navigation Tabs -->
+    <nav aria-label="Main Sections" class="bg-white p-1.5 rounded-2xl border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+      <button data-tab="study" class="nav-tab active flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl text-sm font-bold transition bg-slate-900 text-white">
+        <i data-lucide="book-open" class="w-4 h-4"></i>
+        <span class="font-en">Procedures &amp; Steps</span>
+        <span class="font-ar text-xs font-semibold opacity-80">(المذاكرة والخطوات)</span>
+      </button>
+
+      <button data-tab="summaries" class="nav-tab flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl text-sm font-bold transition text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+        <i data-lucide="layout-grid" class="w-4 h-4"></i>
+        <span class="font-en">Visual Summaries</span>
+        <span class="font-ar text-xs font-semibold opacity-80">(ملخصات التبسيط)</span>
+      </button>
+
+      <button data-tab="exam" class="nav-tab flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl text-sm font-bold transition text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+        <span class="font-en">Mock Exam &amp; Quiz</span>
+        <span class="font-ar text-xs font-semibold opacity-80">(التقييم والأسئلة)</span>
+      </button>
+    </nav>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 1: PROCEDURES & STEPS                                             -->
+    <!-- ===================================================================== -->
+    <section id="tab-study" class="tab-panel space-y-6 animate-fade">
+
+      <!-- Clean Horizontal Pill Bar for the 7 Procedures -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="procedurePillsBar">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Spacious Active Procedure Header Card -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500">
+              <span id="procUnitBadge" class="px-2.5 py-1 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/70 font-en font-bold">Unit I</span>
+              <span id="procPagesBadge" class="font-en">Logbook Pages 3–5</span>
+              <span>•</span>
+              <span class="font-en font-bold text-slate-700">Total: 25 Marks</span>
+            </div>
+            <h2 id="procTitleEn" class="font-en text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+              Chest physiotherapy
+            </h2>
+            <p id="procTitleAr" class="font-ar text-base sm:text-lg font-bold text-teal-700" dir="rtl">
+              العلاج الطبيعي للصدر (القرع والاهتزاز)
+            </p>
+          </div>
+
+          <!-- Completion Progress & Action -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+            <div class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 min-w-[165px]">
+              <div class="flex items-center justify-between text-xs font-bold mb-1.5">
+                <span class="font-ar text-slate-500">نسبة الحفظ</span>
+                <span id="procProgressLabel" class="font-en text-slate-900">0 / 23 (0%)</span>
+              </div>
+              <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <div id="procProgressFill" class="h-full bg-teal-600 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <button id="markAllStepsBtn" class="px-4 py-3 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white transition flex items-center justify-center gap-2">
+              <i data-lucide="check-check" class="w-4 h-4"></i>
+              <span class="font-ar">تحديد الكل كمحفوظ</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Clean Study Filter Bar -->
+        <div class="pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          <!-- Search Input -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            <input
+              type="text"
+              id="stepSearchInput"
+              placeholder="Search steps in English or Arabic... (ابحث في الخطوات)"
+              class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:border-sky-500 focus:outline-none text-sm text-slate-900 placeholder-slate-400 transition"
+            />
+            <button id="clearStepSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Recall & High-Mark Filter Toggles -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="toggleArabicBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 transition flex items-center gap-1.5">
+              <i data-lucide="eye-off" class="w-3.5 h-3.5"></i>
+              <span class="font-ar">إخفاء العربي</span>
+            </button>
+
+            <button id="toggleEnglishBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 transition flex items-center gap-1.5">
+              <i data-lucide="eye-off" class="w-3.5 h-3.5"></i>
+              <span class="font-ar">إخفاء الإنجليزي</span>
+            </button>
+
+            <button id="toggleHighMarksBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-50 hover:bg-amber-50 text-slate-700 border border-slate-200 transition flex items-center gap-1.5">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-amber-500"></i>
+              <span class="font-en">≥ 1.5 Marks</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spacious Step Cards Container (Grouped by Clean Phase Headers) -->
+      <div id="stepsFeedContainer" class="space-y-6">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 2: VISUAL SUMMARIES                                               -->
+    <!-- ===================================================================== -->
+    <section id="tab-summaries" class="tab-panel hidden space-y-8 animate-fade">
+
+      <!-- Card 1: ECG 12-Lead Placement Map & Table -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+          <div>
+            <span class="font-en text-xs font-bold text-rose-600 uppercase tracking-wider">ECG — 10 Marks Total (Steps 11 &amp; 12)</span>
+            <h2 class="font-en text-xl font-extrabold text-slate-900 mt-1">12-Lead ECG Electrode Placement Guide</h2>
+          </div>
+          <p class="font-ar text-sm font-bold text-slate-600" dir="rtl">خريطة توصيل أقطاب رسم القلب الكهربائي</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Clean SVG Anatomical Diagram -->
+          <div class="lg:col-span-5 bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col items-center">
+            <svg viewBox="0 0 320 330" class="w-full max-w-[270px] h-auto select-none">
+              <!-- Torso & Limbs Outline -->
+              <path d="M160 25 C142 25 132 38 132 54 C132 68 141 78 148 82 L148 92 L95 106 C76 112 66 128 60 155 L42 230 C40 238 48 242 54 235 L78 165 L86 165 L86 285 L125 285 L130 320 L152 320 L154 285 L166 285 L168 320 L190 320 L195 285 L234 285 L234 165 L242 165 L266 235 C272 242 280 238 278 230 L260 155 C254 128 244 112 225 106 L172 92 L172 82 C179 78 188 68 188 54 C188 38 178 25 160 25 Z" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
+              <!-- Sternum & Clavicles -->
+              <line x1="160" y1="102" x2="160" y2="185" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+              <path d="M115 105 Q138 112 158 104 M205 105 Q182 112 162 104" fill="none" stroke="#64748B" stroke-width="2"/>
+              <!-- Midclavicular & Axillary Reference Lines -->
+              <line x1="196" y1="108" x2="196" y2="225" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="216" y1="115" x2="216" y2="225" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="231" y1="125" x2="231" y2="225" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3,3"/>
+
+              <!-- Limb Leads -->
+              <g class="ecg-pin cursor-pointer" data-lead="RA">
+                <circle cx="66" cy="175" r="13" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+                <text x="66" y="179" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="bold">RA</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="LA">
+                <circle cx="254" cy="175" r="13" fill="#EAB308" stroke="#FFFFFF" stroke-width="2"/>
+                <text x="254" y="179" text-anchor="middle" fill="#0F172A" font-size="10" font-weight="bold">LA</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="RL">
+                <circle cx="138" cy="302" r="13" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+                <text x="138" y="306" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="bold">RL</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="LL">
+                <circle cx="182" cy="302" r="13" fill="#22C55E" stroke="#FFFFFF" stroke-width="2"/>
+                <text x="182" y="306" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="bold">LL</text>
+              </g>
+
+              <!-- Chest Leads V1-V6 -->
+              <g class="ecg-pin cursor-pointer" data-lead="V1">
+                <circle cx="147" cy="148" r="10" fill="#0284C7" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="147" y="151" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V1</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="V2">
+                <circle cx="173" cy="148" r="10" fill="#4F46E5" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="173" y="151" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V2</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="V3">
+                <circle cx="184" cy="162" r="10" fill="#7C3AED" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="184" y="165" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V3</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="V4">
+                <circle cx="196" cy="176" r="10" fill="#DB2777" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="196" y="179" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V4</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="V5">
+                <circle cx="215" cy="176" r="10" fill="#EA580C" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="215" y="179" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V5</text>
+              </g>
+              <g class="ecg-pin cursor-pointer" data-lead="V6">
+                <circle cx="231" cy="176" r="10" fill="#0D9488" stroke="#FFFFFF" stroke-width="1.8"/>
+                <text x="231" y="179" text-anchor="middle" fill="#FFFFFF" font-size="8.5" font-weight="bold">V6</text>
+              </g>
+            </svg>
+
+            <div id="ecgPinInfoBox" class="mt-4 w-full bg-white rounded-xl border border-slate-200 p-4 text-center">
+              <p class="font-en text-xs font-bold text-sky-700">Click any lead on the diagram</p>
+              <p class="font-ar text-xs text-slate-600 mt-1" dir="rtl">اضغط على أي قطب لعرض لونه ومكانه التشريحي الدقيق</p>
+            </div>
+          </div>
+
+          <!-- Clean Reference Table -->
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <h3 class="font-en text-sm font-bold text-slate-900 mb-2.5">Limb Leads (4 Marks — Leg connections point superiorly)</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-red-500 text-white font-bold flex items-center justify-center shrink-0">RA</span>
+                  <div>
+                    <div class="font-bold text-slate-900">Red ("RA") → Right Arm</div>
+                    <div class="font-ar text-slate-600">الأحمر للذراع الأيمن</div>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-yellow-400 text-slate-900 font-bold flex items-center justify-center shrink-0">LA</span>
+                  <div>
+                    <div class="font-bold text-slate-900">Yellow ("LA") → Left Arm</div>
+                    <div class="font-ar text-slate-600">الأصفر للذراع الأيسر</div>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center shrink-0">RL</span>
+                  <div>
+                    <div class="font-bold text-slate-900">Black ("RL") → Right Leg</div>
+                    <div class="font-ar text-slate-600">الأسود للساق اليمنى</div>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-green-500 text-white font-bold flex items-center justify-center shrink-0">LL</span>
+                  <div>
+                    <div class="font-bold text-slate-900">Green ("LL") → Left Leg</div>
+                    <div class="font-ar text-slate-600">الأخضر للساق اليسرى</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-en text-sm font-bold text-slate-900 mb-2.5">Chest Leads (6 Marks — Apply electrode paste first)</h3>
+              <div class="border border-slate-200 rounded-xl overflow-hidden text-xs">
+                <table class="w-full text-left border-collapse">
+                  <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-slate-50/70">
+                      <td class="p-3 font-bold text-sky-700 w-14">V1</td>
+                      <td class="p-3 font-medium text-slate-900">4th intercostal space (ICS) at right sternal border</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">الفراغ الوربي الرابع يمين القص</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 font-bold text-indigo-700">V2</td>
+                      <td class="p-3 font-medium text-slate-900">4th ICS at left sternal border</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">الفراغ الوربي الرابع يسار القص</td>
+                    </tr>
+                    <tr class="bg-slate-50/70">
+                      <td class="p-3 font-bold text-purple-700">V3</td>
+                      <td class="p-3 font-medium text-slate-900">Midway between V2 and V4</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">في المنتصف بين V2 و V4</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 font-bold text-pink-700">V4</td>
+                      <td class="p-3 font-medium text-slate-900">5th ICS at midclavicular line</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">الفراغ الوربي الخامس خط منتصف الترقوة</td>
+                    </tr>
+                    <tr class="bg-slate-50/70">
+                      <td class="p-3 font-bold text-orange-700">V5</td>
+                      <td class="p-3 font-medium text-slate-900">Left anterior axillary line at level of V4 horizontally</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">الخط الإبطي الأمامي الأيسر بمستوى V4</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 font-bold text-teal-700">V6</td>
+                      <td class="p-3 font-medium text-slate-900">Left midaxillary line at level of V4 horizontally</td>
+                      <td class="p-3 font-ar text-slate-600 text-right" dir="rtl">الخط الإبطي الأوسط الأيسر بمستوى V4</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Chest Physiotherapy Lung Drainage Matrix -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+          <div>
+            <span class="font-en text-xs font-bold text-teal-600 uppercase tracking-wider">Chest Physiotherapy — Steps 11 to 15 (7 Marks)</span>
+            <h2 class="font-en text-xl font-extrabold text-slate-900 mt-1">Postural Drainage, Percussion &amp; Vibration</h2>
+          </div>
+          <p class="font-ar text-sm font-bold text-slate-600" dir="rtl">أوضاع تصريف الرئة والقرع والاهتزاز</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-en text-sm font-extrabold text-slate-900">Upper Lobes</h3>
+              <span class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700">2 Marks</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li><strong>a. Sitting upright:</strong> targets right and left chest.</li>
+              <li><strong>b. Leaning forward sitting:</strong> targets back.</li>
+              <li><strong>c. Lying flat on back:</strong> targets right and left chest.</li>
+              <li><strong>d. Lying on abdomen (tilted R/L):</strong> targets right or left back.</li>
+            </ul>
+            <p class="font-ar text-xs text-teal-700 font-semibold pt-2 border-t border-slate-200" dir="rtl">
+              الفصوص العلوية: الجلوس منتصباً أو الاستلقاء على الظهر (للصدر)، والانحناء للأمام أو الاستلقاء على البطن مائلاً (للظهر).
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-en text-sm font-extrabold text-slate-900">Middle Lobe</h3>
+              <span class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700">1 Mark</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              <strong>Lying on back, tilted to left side in Trendelenburg's position</strong> — targets <strong>right chest</strong>.
+            </p>
+            <p class="font-ar text-xs text-teal-700 font-semibold pt-2 border-t border-slate-200" dir="rtl">
+              الفص الأوسط: الاستلقاء على الظهر مع الميل للجانب الأيسر في وضع ترندلنبرج (يستهدف الصدر الأيمن).
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-en text-sm font-extrabold text-slate-900">Basal / Lower Lobes</h3>
+              <span class="font-en text-xs font-bold px-2.5 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700">1.5 Marks</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li><strong>a. Trendelenburg on back:</strong> drains <em>anterior</em> basal lobes (chest).</li>
+              <li><strong>b. Trendelenburg on abdomen:</strong> drains <em>posterior</em> basal lobes (back).</li>
+              <li><strong>c. Lying on abdomen (flat):</strong> drains <em>superior</em> basal lobes (back).</li>
+            </ul>
+            <p class="font-ar text-xs text-teal-700 font-semibold pt-2 border-t border-slate-200" dir="rtl">
+              الفصوص القاعدية: ترندلنبرج على الظهر (الأمامية)، ترندلنبرج على البطن (الخلفية)، على البطن مسطحاً (العلوية).
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-sky-50/60 border border-sky-200/80 text-xs">
+            <div class="font-en font-bold text-slate-900">Chest Percussion (Step 14 — 1 Mark)</div>
+            <p class="text-slate-600 mt-1">Maintain patient in position until chest percussion is completed (<strong>approximately 5 minutes</strong>).</p>
+            <p class="font-ar text-teal-700 font-semibold mt-1" dir="rtl">يستمر القرع على الصدر لمدة 5 دقائق تقريباً.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-sky-50/60 border border-sky-200/80 text-xs">
+            <div class="font-en font-bold text-slate-900">Chest Vibration (Step 15 — 1.5 Marks)</div>
+            <p class="text-slate-600 mt-1">Vibrate chest wall as patient exhales slowly through <strong>pursed lips</strong> (repeat around <strong>15 seconds</strong>); relieve pressure on inhalation.</p>
+            <p class="font-ar text-teal-700 font-semibold mt-1" dir="rtl">اهتزاز جدار الصدر أثناء الزفير البطيء بشفاه مزمومة لحوالي 15 ثانية.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Intermittent Bolus vs. Intermittent Gavage Comparison -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+          <div>
+            <span class="font-en text-xs font-bold text-indigo-600 uppercase tracking-wider">Enteral Feeding — Unit III</span>
+            <h2 class="font-en text-xl font-extrabold text-slate-900 mt-1">Intermittent Bolus vs. Intermittent Gavage</h2>
+          </div>
+          <p class="font-ar text-sm font-bold text-slate-600" dir="rtl">الفرق الجوهري بين التغذية بالسرنجة والتغذية بالكيس</p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl overflow-hidden text-xs">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-slate-800">
+                <th class="p-3.5 text-left font-bold w-1/4">Phase / Step</th>
+                <th class="p-3.5 text-left font-bold text-sky-700 w-[37.5%]">Intermittent Bolus (Syringe)</th>
+                <th class="p-3.5 text-left font-bold text-indigo-700 w-[37.5%]">Intermittent Gavage (Bag)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-700 bg-slate-50/40">Steps 1–10<br/><span class="font-ar font-normal text-slate-500">التحضير والمتبقي المعدي</span></td>
+                <td colspan="2" class="p-3.5 text-slate-700 leading-relaxed">
+                  <strong>Identical sequence:</strong> Right side in High Fowler's position (2 Marks), auscultate bowel sounds, check gastric residual (if <strong>&gt; 50–100 mL</strong>, hold feeding until residual diminishes; instill aspirated contents back — 3 Marks).
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-700 bg-slate-50/40">Step 11</td>
+                <td class="p-3.5 text-slate-800"><strong>Pinch the tubing</strong> (2 Marks)<br/><span class="font-ar text-teal-700">ثني/قرص الأنبوبة لمنع دخول الهواء</span></td>
+                <td class="p-3.5 text-slate-800"><strong>Hang bag on IV pole 18 inches above patient's head</strong> (1.5 Marks)<br/><span class="font-ar text-teal-700">تعليق الكيس على ارتفاع 18 بوصة فوق رأس المريض</span></td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-700 bg-slate-50/40">Step 12</td>
+                <td class="p-3.5 text-slate-800"><strong>Remove plunger from barrel of syringe</strong> &amp; attach to adapter (1 Mark)</td>
+                <td class="p-3.5 text-slate-800"><strong>Remove air from bag's tubing</strong> (1.5 Marks)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-700 bg-slate-50/40">Steps 13–14</td>
+                <td class="p-3.5 text-slate-800">Fill syringe with formula &amp; allow slow infusion until prescribed amount is given (2 Marks)</td>
+                <td class="p-3.5 text-slate-800">Attach tubing, adjust drip over prescribed time (2 Marks), then add <strong>30–60 mL water</strong> &amp; close clamp (2 Marks)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-700 bg-slate-50/40">Step 15</td>
+                <td class="p-3.5 text-slate-800"><strong>Flush tubing with 30–60 mL</strong> or prescribed amount of water (2 Marks)</td>
+                <td class="p-3.5 text-slate-800"><strong>Wash reusable gavage bag with soap and hot water every 24 hours</strong> (1 Mark)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Card 4: Key Exam Numbers Cheat-Sheet -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+          <div>
+            <span class="font-en text-xs font-bold text-amber-600 uppercase tracking-wider">Quick Memorization</span>
+            <h2 class="font-en text-xl font-extrabold text-slate-900 mt-1">Key Exam Numbers &amp; Timeframes</h2>
+          </div>
+          <p class="font-ar text-sm font-bold text-slate-600" dir="rtl">أهم الأرقام والأوقات في التقييم العملي</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="keyNumbersGrid">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 3: MOCK EXAM & QUIZ                                               -->
+    <!-- ===================================================================== -->
+    <section id="tab-exam" class="tab-panel hidden space-y-8 animate-fade">
+
+      <!-- Mode Switcher inside Tab 3 -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200">
+        <div class="flex items-center gap-2">
+          <button id="subModeRubricBtn" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-sky-600 text-white transition">
+            1. 25-Mark Evaluator Rubric (تقييم عملي)
+          </button>
+          <button id="subModeQuizBtn" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            2. 21-Question MCQ Exam (بنك الأسئلة)
+          </button>
+        </div>
+        <span class="font-en text-xs font-semibold text-slate-500">Test your mastery before evaluation day</span>
+      </div>
+
+      <!-- Sub-panel A: 25-Mark Practical Evaluator Checklist -->
+      <div id="rubricSimulatorBox" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+          <div>
+            <h2 class="font-en text-xl font-extrabold text-slate-900">25-Mark Clinical Evaluator Simulator</h2>
+            <p class="font-ar text-xs sm:text-sm text-slate-500 mt-1" dir="rtl">حدّد الخطوات التي قمت بتنفيذها أو تسميعها لحساب درجتك الفعلية من 25 درجة</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="simProcSelect" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500">
+              <!-- Populated by JS -->
+            </select>
+            <button id="simBlindBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+              Blind Recall (إخفاء)
+            </button>
+            <button id="simClearBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-rose-50 hover:text-rose-600 text-slate-600 transition">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Score Bar -->
+        <div class="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-white/10 border border-white/15 flex flex-col items-center justify-center shrink-0">
+              <span id="simScoreNum" class="font-en text-xl font-extrabold text-sky-400">0</span>
+              <span class="font-en text-[11px] text-slate-400">/ 25</span>
+            </div>
+            <div>
+              <div id="simRatingText" class="font-en text-base sm:text-lg font-extrabold text-white">Select completed steps below</div>
+              <div id="simCountText" class="font-en text-xs text-slate-300 mt-0.5">0 of 23 steps checked</div>
+            </div>
+          </div>
+          <div class="sm:w-56">
+            <div class="flex justify-between text-xs font-bold mb-1.5">
+              <span class="text-slate-400">Score %</span>
+              <span id="simPctText" class="font-en text-sky-400">0%</span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden">
+              <div id="simBarFill" class="h-full bg-sky-400 transition-all duration-300" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checklist Items -->
+        <div id="simStepsList" class="space-y-3">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Missed Steps Summary -->
+        <div id="simMissedSummary" class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-2">
+          <h3 class="font-en text-xs font-extrabold text-amber-900 uppercase tracking-wider">Unchecked Steps (Remaining Marks)</h3>
+          <div id="simMissedItems" class="text-xs text-amber-900/90 space-y-1.5"></div>
+        </div>
+      </div>
+
+      <!-- Sub-panel B: 21-Question Interactive MCQ Exam -->
+      <div id="mcqQuizBox" class="hidden bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+          <div>
+            <h2 class="font-en text-xl font-extrabold text-slate-900">21-Question Clinical Evaluation Quiz</h2>
+            <p class="font-ar text-xs sm:text-sm text-slate-500 mt-1" dir="rtl">اختبر فهمك لخطوات الإجراءات السبعة والأرقام التشريحية وقواعد الأمان</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <select id="quizProcFilter" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-50 border border-slate-200 text-slate-900">
+              <option value="all">All 7 Procedures (21 Questions)</option>
+              <option value="chest_physio">Chest Physiotherapy (3 Qs)</option>
+              <option value="nebulizer">Nebulizer (3 Qs)</option>
+              <option value="spirometer">Incentive Spirometer (3 Qs)</option>
+              <option value="ecg">ECG (3 Qs)</option>
+              <option value="intermittent_bolus">Intermittent Bolus (3 Qs)</option>
+              <option value="intermittent_gavage">Intermittent Gavage (3 Qs)</option>
+              <option value="ngt_removal">NGT Removal (3 Qs)</option>
+            </select>
+            <button id="quizRestartBtn" class="px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-white hover:bg-slate-800 transition">
+              Restart
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Status Bar -->
+        <div class="flex items-center justify-between bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl text-xs font-bold">
+          <div class="flex items-center gap-2.5">
+            <span id="quizProgressBadge" class="px-2.5 py-1 rounded-lg bg-slate-900 text-white font-en">Question 1 / 21</span>
+            <span id="quizProcLabel" class="text-sky-700 font-en">Chest Physiotherapy</span>
+          </div>
+          <div class="flex items-center gap-4 font-en">
+            <span class="text-emerald-600">Correct: <span id="quizScoreCorrect">0</span></span>
+            <span class="text-rose-600">Wrong: <span id="quizScoreWrong">0</span></span>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div id="quizQuestionArea" class="space-y-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- CLEAN MINIMAL FOOTER                                                    -->
+  <!-- ======================================================================= -->
+  <footer class="bg-white border-t border-slate-200 py-6 mt-12">
+    <div class="max-w-[1040px] mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div class="font-en">
+        Adult Nursing I (Practical Evaluation) — Faculty of Nursing, Assiut University (2026–2027)
+      </div>
+      <div class="signature-badge px-3.5 py-1.5 rounded-full inline-flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300 sparkle-glow"></i>
+        <span class="font-en font-extrabold shimmer-text">Prepared by Mr. Mahmoud Ali</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+  <!-- APPLICATION DATA & INTERACTIVE LOGIC                                    -->
+  <!-- ======================================================================= -->
+  <script>
+    // 1. COMPLETE UNABRIDGED LOGBOOK DATA (ALL 7 EVALUATION PROCEDURES)
+    const PROCEDURES = [
+      {
+        id: 'chest_physio',
+        shortName: 'Chest Physiotherapy',
+        titleEn: 'Chest physiotherapy',
+        titleAr: 'العلاج الطبيعي للصدر (القرع والاهتزاز)',
+        unit: 'Unit I',
+        pages: 'Pages 3–5',
+        totalMarks: 25,
+        icon: 'wind',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Privacy', en: 'Check physician prescriptions.', ar: 'فحص ومراجعة أوامر وتعليمات الطبيب.' },
+          { no: 2, marks: 1, phase: '1. Preparation & Privacy', en: 'Wash hands and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 1, phase: '1. Preparation & Privacy', en: 'Gather equipment.', ar: 'تجهيز وتجميع الأدوات اللازمة.' },
+          { no: 4, marks: 1, phase: '1. Preparation & Privacy', en: 'Identify the patient.', ar: 'التحقق من هوية المريض.' },
+          { no: 5, marks: 1, phase: '1. Preparation & Privacy', en: 'Explain procedure to patient and family.', ar: 'شرح الإجراء للمريض ولعائلته.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Privacy', en: 'Close door and curtains.', ar: 'إغلاق الباب والستائر للحفاظ على خصوصية المريض.' },
+          { no: 7, marks: 1, phase: '2. Pre-Procedure Assessment', en: 'Administer bronchodilators, expectorants, or warm liquids if prescribed.', ar: 'إعطاء موسعات الشعب الهوائية أو طاردات البلغم أو السوائل الدافئة إذا كانت موصوفة طبياً.' },
+          { no: 8, marks: 1, phase: '2. Pre-Procedure Assessment', en: 'Encourage patient to void.', ar: 'تشجيع المريض على التبول (إفراغ المثانة) قبل البدء.' },
+          { no: 9, marks: 1, phase: '2. Pre-Procedure Assessment', en: 'Loosen any tight clothes.', ar: 'فك أو تخفيف أي ملابس ضيقة على المريض.' },
+          { no: 10, marks: 1, phase: '2. Pre-Procedure Assessment', en: 'Auscultate breath sounds.', ar: 'سماع أصوات التنفس باستخدام السماعة الطبية.' },
+          {
+            no: 11, marks: 2, phase: '3. Postural Drainage, Percussion & Vibration',
+            en: 'Position patient to drain upper lung segments/lobes:',
+            subEn: [
+              'a. Sitting upright in bed or chair— targets right and left chest.',
+              'b. Leaning forward in sitting position targets back.',
+              'c. Lying flat on back-targets right and left chest.',
+              'd. Lying on abdomen, tilted to right or left side targets right or left back.'
+            ],
+            ar: 'وضع المريض لتصريف الفصوص/الأجزاء العلوية من الرئة:',
+            subAr: [
+              'أ. الجلوس منتصباً في السرير أو الكرسي — يستهدف الصدر الأيمن والأيسر.',
+              'ب. الانحناء للأمام في وضع الجلوس — يستهدف الظهر.',
+              'ج. الاستلقاء مسطحاً على الظهر — يستهدف الصدر الأيمن والأيسر.',
+              'د. الاستلقاء على البطن مع الميل إلى الجانب الأيمن أو الأيسر — يستهدف الظهر الأيمن أو الأيسر.'
+            ]
+          },
+          {
+            no: 12, marks: 1, phase: '3. Postural Drainage, Percussion & Vibration',
+            en: "Position patient to drain middle lobe: Lying on back, tilted to left side in Trendelenburg's position targets right chest.",
+            ar: 'وضع المريض لتصريف الفص الأوسط: الاستلقاء على الظهر مع الميل للجانب الأيسر في وضع ترندلنبرج يستهدف الصدر الأيمن.'
+          },
+          {
+            no: 13, marks: 1.5, phase: '3. Postural Drainage, Percussion & Vibration',
+            en: 'Position patient to drain basal/lower lobes:',
+            subEn: [
+              "a. Lying in Trendelenburg's position on back-targets right and left chest. Drains anterior basal lobes.",
+              "b. Lying in Trendelenburg's position on abdomen targets right and left back. Drains posterior basal lobes.",
+              'c. Lying on abdomen targets right and left back. Drains superior basal lobes.'
+            ],
+            ar: 'وضع المريض لتصريف الفصوص القاعدية/السفلية:',
+            subAr: [
+              'أ. الاستلقاء في وضع ترندلنبرج على الظهر يستهدف الصدر الأيمن والأيسر لتصريف الفصوص القاعدية الأمامية.',
+              'ب. الاستلقاء في وضع ترندلنبرج على البطن يستهدف الظهر الأيمن والأيسر لتصريف الفصوص القاعدية الخلفية.',
+              'ج. الاستلقاء على البطن يستهدف الظهر الأيمن والأيسر لتصريف الفصوص القاعدية العلوية.'
+            ]
+          },
+          {
+            no: 14, marks: 1, phase: '3. Postural Drainage, Percussion & Vibration',
+            en: 'Maintain patient in position until chest percussion is completed (approximately 5 minutes).',
+            ar: 'إبقاء المريض في الوضعية المحددة حتى اكتمال القرع/الطرق على الصدر (لمدة 5 دقائق تقريباً).'
+          },
+          {
+            no: 15, marks: 1.5, phase: '3. Postural Drainage, Percussion & Vibration',
+            en: 'Instruct the patient to inhale slowly and deeply. Vibrate the chest wall as the patient exhales slowly through pursed lips and repeat around 15 seconds:',
+            subEn: [
+              'a. Place one hand on top of the other over affected area or place one hand on each side of the rib cage.',
+              'b. Tense muscles of hands and arms while applying moderate pressure downward and vibrate hands and arms.',
+              'c. Relieve pressure on thorax as the patient inhales.'
+            ],
+            ar: 'توجيه المريض لأخذ شهيق ببطء وعمق، وعمل اهتزاز لجدار الصدر أثناء زفير المريض ببطء من خلال شفاه مزمومة وتكرار ذلك لمدة 15 ثانية تقريباً:',
+            subAr: [
+              'أ. وضع إحدى اليدين فوق الأخرى على المنطقة المصابة أو وضع يد على كل جانب من القفص الصدري.',
+              'ب. شد عضلات اليدين والذراعين مع الضغط المعتدل لأسفل وإحداث اهتزاز باليدين والذراعين.',
+              'ج. تخفيف الضغط عن الصدر أثناء أخذ المريض للشهيق.'
+            ]
+          },
+          { no: 16, marks: 1, phase: '3. Postural Drainage, Percussion & Vibration', en: 'Assist patient into position for coughing or for suctioning of trachea.', ar: 'مساعدة المريض في اتخاذ وضعية مناسبة للسعال أو لشفط الإفرازات من القصبة الهوائية.' },
+          { no: 17, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Auscultate chest areas for breath sounds.', ar: 'سماع مناطق الصدر بالسماعة لتقييم أصوات التنفس بعد الإجراء.' },
+          { no: 18, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Assist patient with mouth care.', ar: 'مساعدة المريض في العناية بالفم وتنظيفه.' },
+          { no: 19, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Position patient in bed with head of bed elevated 45 degrees or more.', ar: 'وضع المريض في السرير مع رفع رأس السرير بزاوية 45 درجة أو أكثر.' },
+          { no: 20, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Turn patient to side with pillow at back.', ar: 'تقليب المريض على جانبه مع وضع وسادة خلف ظهره للدعم.' },
+          { no: 21, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Raise side rails, and place call light within reach.', ar: 'رفع الحواجز الجانبية للسرير ووضع جرس الاستدعاء في متناول يد المريض.' },
+          { no: 22, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 23, marks: 1, phase: '4. Post-Procedure Care & Documentation', en: 'Documentation.', ar: 'التوثيق والتسجيل في ملف المريض.' }
+        ]
+      },
+      {
+        id: 'nebulizer',
+        shortName: 'Nebulizer',
+        titleEn: 'Administering nebulized medications',
+        titleAr: 'إعطاء الأدوية عن طريق الاستنشاق (Nebulizer)',
+        unit: 'Unit I',
+        pages: 'Pages 6–8',
+        totalMarks: 25,
+        icon: 'cloud-fog',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Safety Checks', en: "Check the medication administration record according to the health care provider's orders.", ar: 'مراجعة سجل إعطاء الأدوية (MAR) ومطابقته مع أوامر الطبيب.' },
+          { no: 2, marks: 1, phase: '1. Preparation & Safety Checks', en: 'Wash hands and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 0.5, phase: '1. Preparation & Safety Checks', en: 'Gather equipment.', ar: 'تجهيز وتجميع الأدوات اللازمة.' },
+          { no: 4, marks: 0.5, phase: '1. Preparation & Safety Checks', en: 'Identify the patient.', ar: 'التحقق من هوية المريض.' },
+          { no: 5, marks: 0.5, phase: '1. Preparation & Safety Checks', en: 'Explain the procedure to patient and family.', ar: 'شرح الإجراء للمريض ولعائلته.' },
+          { no: 6, marks: 0.5, phase: '1. Preparation & Safety Checks', en: 'Close door and curtains.', ar: 'إغلاق الباب والستائر للحفاظ على الخصوصية.' },
+          { no: 7, marks: 1, phase: '1. Preparation & Safety Checks', en: "Assess patient's ability to use the nebulizer.", ar: 'تقييم قدرة المريض على استخدام جهاز الاستنشاق (النيبولايزر).' },
+          { no: 8, marks: 1, phase: '1. Preparation & Safety Checks', en: 'Check for drug allergies and hypersensitivity.', ar: 'التحقق من وجود أي حساسية تجاه الأدوية أو فرط حساسية.' },
+          { no: 9, marks: 1, phase: '2. Nebulizer Assembly', en: 'Set up the medication for one patient at a time.', ar: 'تحضير الدواء لمريض واحد فقط في كل مرة.' },
+          { no: 10, marks: 1, phase: '2. Nebulizer Assembly', en: 'Fill the nebulizer cup with the ordered amount of medication.', ar: 'ملء كوب جهاز الاستنشاق بالكمية الموصوفة من الدواء.' },
+          { no: 11, marks: 1, phase: '2. Nebulizer Assembly', en: 'Cover the cup with the cap.', ar: 'تغطية الكوب بالغطاء المخصص له بإحكام.' },
+          { no: 12, marks: 1, phase: '2. Nebulizer Assembly', en: 'Fasten the T-piece to the top of the cap.', ar: 'تثبيت الوصلة الثلاثية (T-piece) في الجزء العلوي من الغطاء.' },
+          { no: 13, marks: 1, phase: '2. Nebulizer Assembly', en: 'Fasten a short length of tubing to one end of the T-piece.', ar: 'توصيل قطعة قصيرة من الأنبوب بأحد طرفي الوصلة الثلاثية (T-piece).' },
+          { no: 14, marks: 1, phase: '2. Nebulizer Assembly', en: 'Fasten the mouthpiece or mask to the other end of the T-piece.', ar: 'تثبيت قطعة الفم (Mouthpiece) أو القناع (Mask) في الطرف الآخر للوصلة الثلاثية.' },
+          { no: 15, marks: 1, phase: '3. Medication Administration', en: 'Identify the patient prior to administration of medication.', ar: 'إعادة التحقق من هوية المريض قبل إعطاء الدواء مباشرة.' },
+          { no: 16, marks: 1, phase: '3. Medication Administration', en: 'Explain the therapeutic purpose of the medication.', ar: 'شرح الغرض العلاجي من الدواء للمريض.' },
+          { no: 17, marks: 1, phase: '3. Medication Administration', en: 'Advise the patient to sit in an upright position.', ar: 'نصح المريض بالجلوس في وضع مستقيم (منتصباً).' },
+          { no: 18, marks: 1, phase: '3. Medication Administration', en: 'Attach tubing to the bottom of the nebulizer cup and attach the other end to the wall air.', ar: 'توصيل الأنبوب بأسفل كوب الاستنشاق وتوصيل الطرف الآخر بمصدر الهواء الجداري.' },
+          { no: 19, marks: 1, phase: '3. Medication Administration', en: 'Turn on the oxygen or air at the prescribed liter flow.', ar: 'فتح الأكسجين أو الهواء على معدل التدفق الموصوف باللتر.' },
+          { no: 20, marks: 2, phase: '3. Medication Administration', en: 'Instruct the patient to close the lips around the mouthpiece and to breathe through the mouth. If the patient is using a mask, should breathe normally, with the mouth closed.', ar: 'توجيه المريض لإغلاق شفتيه بإحكام حول قطعة الفم والتنفس من خلال الفم، أما إذا كان يستخدم القناع فيجب أن يتنفس بشكل طبيعي مع إغلاق الفم.' },
+          { no: 21, marks: 1, phase: '3. Medication Administration', en: 'Instruct the patient to continue the treatment until the patient can no longer see a mist on exhalation from the opposite end of the mouthpiece or in the mask.', ar: 'توجيه المريض للاستمرار في جلسة الاستنشاق حتى يتوقف خروج الرذاذ (البخار) أثناء الزفير من الطرف المقابل لقطعة الفم أو داخل القناع.' },
+          { no: 22, marks: 1, phase: '4. Post-Treatment & Documentation', en: 'When the nebulizer cup is empty, turn off the compressor.', ar: 'عندما يفرغ كوب الاستنشاق تماماً، يتم إيقاف تشغيل الجهاز (الكمبريسور).' },
+          { no: 23, marks: 1, phase: '4. Post-Treatment & Documentation', en: 'Cleanse the nebulizer cup and mouthpiece with warm, soapy water. Rinse and dry it after each use.', ar: 'تنظيف كوب الاستنشاق وقطعة الفم بالماء الدافئ والصابون، ثم شطفهما وتجفيفهما بعد كل استخدام.' },
+          { no: 24, marks: 1, phase: '4. Post-Treatment & Documentation', en: 'Assess the patient immediately for results or adverse effects from the treatment.', ar: 'تقييم حالة المريض فوراً لملاحظة النتائج العلاجية أو أي آثار جانبية للعلاج.' },
+          { no: 25, marks: 1, phase: '4. Post-Treatment & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 26, marks: 1, phase: '4. Post-Treatment & Documentation', en: "Documentation: Record the medications administered along with the date, time, and dosage on the chart. Record patient's response.", ar: 'التوثيق: تسجيل الأدوية التي تم إعطاؤها مع التاريخ والوقت والجرعة في ملف المريض، وتسجيل استجابة المريض.' }
+        ]
+      },
+      {
+        id: 'spirometer',
+        shortName: 'Incentive Spirometer',
+        titleEn: 'Assisting a patient with an incentive spirometer',
+        titleAr: 'مساعدة المريض في استخدام مقياس التنفس التحفيزي (Spirometer)',
+        unit: 'Unit I',
+        pages: 'Pages 9–10',
+        totalMarks: 25,
+        icon: 'gauge',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Privacy', en: 'Check physician prescriptions. Check chart for previous respiratory status assessment.', ar: 'مراجعة أوامر الطبيب وفحص ملف المريض للاطلاع على التقييم السابق للحالة التنفسية.' },
+          { no: 2, marks: 1, phase: '1. Preparation & Privacy', en: 'Wash hands and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 1, phase: '1. Preparation & Privacy', en: 'Gather equipment.', ar: 'تجهيز وتجميع الأدوات اللازمة.' },
+          { no: 4, marks: 1, phase: '1. Preparation & Privacy', en: 'Identify the patient.', ar: 'التحقق من هوية المريض.' },
+          { no: 5, marks: 1, phase: '1. Preparation & Privacy', en: 'Explain the procedure to patient and family.', ar: 'شرح الإجراء للمريض ولعائلته.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Privacy', en: 'Close door and curtains.', ar: 'إغلاق الباب والستائر للحفاظ على الخصوصية.' },
+          { no: 7, marks: 1, phase: '2. Assessment & Splinting', en: 'Assess respiratory status before using incentive spirometer.', ar: 'تقييم الحالة التنفسية للمريض قبل استخدام جهاز قياس التنفس التحفيزي.' },
+          { no: 8, marks: 1, phase: '2. Assessment & Splinting', en: "Assist patient to an upright or semi-Fowler's position if possible.", ar: "مساعدة المريض في الجلوس بوضع مستقيم أو وضع شبه فاولر (Semi-Fowler's) إن أمكن." },
+          { no: 9, marks: 1, phase: '2. Assessment & Splinting', en: "Assess the patient's level of pain. Administer pain medication as prescribed, if needed.", ar: 'تقييم مستوى الألم لدى المريض وإعطاء مسكنات الألم الموصوفة عند الحاجة.' },
+          { no: 10, marks: 1, phase: '2. Assessment & Splinting', en: 'Place a pillow or folded blanket over a chest or abdominal incision for splinting.', ar: 'وضع وسادة أو بطانية مطوية فوق الجرح الجراحي بالصدر أو البطن لدعمه وتثبيته (Splinting).' },
+          { no: 11, marks: 2, phase: '3. Spirometer Technique', en: 'Demonstrate how to steady the device with one hand and hold the mouthpiece with the other hand. If the patient cannot use hands, assist the patient with the incentive spirometer.', ar: 'توضيح كيفية تثبيت الجهاز بيد واحدة وإمساك قطعة الفم باليد الأخرى، وإذا لم يتمكن المريض من استخدام يديه يتم مساعدته في الإمساك بالجهاز.' },
+          { no: 12, marks: 2, phase: '3. Spirometer Technique', en: 'Set pointer on incentive spirometer at appropriate level or point to level where disk or ball should reach.', ar: 'ضبط المؤشر على الجهاز عند المستوى المناسب أو الإشارة إلى المستوى الذي يجب أن يصل إليه القرص أو الكرة.' },
+          { no: 13, marks: 1, phase: '3. Spirometer Technique', en: 'Have patient inhale and exhale completely before using incentive spirometer.', ar: 'الطلب من المريض أخذ شهيق وزفير كاملين قبل البدء في استخدام الجهاز.' },
+          { no: 14, marks: 1, phase: '3. Spirometer Technique', en: 'Hold unit upright.', ar: 'إمساك وحدة الجهاز في وضع مستقيم (عمودي).' },
+          { no: 15, marks: 2, phase: '3. Spirometer Technique', en: 'Have patient seal lips around mouthpiece and inhale slowly and deeply until desired volume is attained.', ar: 'الطلب من المريض إغلاق شفتيه بإحكام حول قطعة الفم وأخذ شهيق ببطء وعمق حتى الوصول إلى الحجم المطلوب.' },
+          { no: 16, marks: 1, phase: '3. Spirometer Technique', en: 'Sustain inspiration for at least 3 seconds & exhale slowly.', ar: 'الحفاظ على حبس الشهيق لمدة 3 ثوانٍ على الأقل ثم إخراج الزفير ببطء.' },
+          { no: 17, marks: 1, phase: '3. Spirometer Technique', en: 'Repeat 10 to 20 times every 1 to 2 hours while awake for 72 hours.', ar: 'تكرار التمرين من 10 إلى 20 مرة كل ساعة إلى ساعتين أثناء الاستيقاظ لمدة 72 ساعة.' },
+          { no: 18, marks: 1, phase: '4. Post-Care & Documentation', en: 'Clean the mouthpiece with water and shake to dry.', ar: 'تنظيف قطعة الفم بالماء وهزّها لتجف.' },
+          { no: 19, marks: 1, phase: '4. Post-Care & Documentation', en: 'Dispose soiled equipment or tissues.', ar: 'التخلص من الأدوات أو المناديل المتسخة في المكان المخصص.' },
+          { no: 20, marks: 1, phase: '4. Post-Care & Documentation', en: 'Remove PPE, if used and perform hand hygiene.', ar: 'خلع معدات الوقاية الشخصية (إن وجدت) وتطهير/غسل اليدين.' },
+          {
+            no: 21, marks: 2, phase: '4. Post-Care & Documentation',
+            en: 'Documentation:',
+            subEn: [
+              'Record lung volume.',
+              'Record respiratory assessment including breath sounds, rate, and depth.',
+              'Note the type and amount of secretions expectorated.',
+              "Record patient's response."
+            ],
+            ar: 'التوثيق:',
+            subAr: [
+              'تسجيل حجم الرئة المُحقق.',
+              'تسجيل التقييم التنفسي شاملاً أصوات التنفس ومعدله وعمقه.',
+              'ملاحظة نوع وكمية الإفرازات المقشوعة.',
+              'تسجيل استجابة المريض.'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'ecg',
+        shortName: 'ECG',
+        titleEn: 'Electrocardiogram (ECG)',
+        titleAr: 'رسم القلب الكهربائي (ECG)',
+        unit: 'Unit II',
+        pages: 'Pages 11–12',
+        totalMarks: 25,
+        icon: 'activity',
+        steps: [
+          { no: 1, marks: 0.5, phase: '1. Preparation & Patient Setup', en: 'Check physician prescriptions.', ar: 'مراجعة أوامر وتعليمات الطبيب.' },
+          { no: 2, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Wash hands and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 0.5, phase: '1. Preparation & Patient Setup', en: 'Gather equipment.', ar: 'تجهيز وتجميع الأدوات اللازمة.' },
+          { no: 4, marks: 0.5, phase: '1. Preparation & Patient Setup', en: 'Identify the patient.', ar: 'التحقق من هوية المريض.' },
+          { no: 5, marks: 0.5, phase: '1. Preparation & Patient Setup', en: 'Explain the procedure to patient and family.', ar: 'شرح الإجراء للمريض ولعائلته.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Close door and curtains.', ar: 'إغلاق الباب والستائر للحفاظ على الخصوصية.' },
+          { no: 7, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Bring ECG machine to the bedside and open electrode packages.', ar: 'إحضار جهاز رسم القلب (ECG) بجانب السرير وفتح عبوات الأقطاب الكهربائية.' },
+          { no: 8, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Enter all demographic data into the machine.', ar: 'إدخال جميع البيانات التعريفية للمريض في الجهاز.' },
+          { no: 9, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Position the patient in a supine and relaxed position and drape with a sheet.', ar: 'وضع المريض في وضع الاستلقاء على الظهر (Supine) باسترخاء وتغطيته بملاءة.' },
+          { no: 10, marks: 1, phase: '1. Preparation & Patient Setup', en: 'Remove moisture, oil, and excess hair from site at electrode sites.', ar: 'إزالة الرطوبة والزيوت والشعر الزائد من مواضع تثبيت الأقطاب على الجلد.' },
+          {
+            no: 11, marks: 4, phase: '2. Lead Placement & Tracing',
+            en: 'Apply the limb lead electrodes. The tip of each lead wire is lettered and color coded for easy identification. Position the electrodes on the legs with the lead connection pointing superiorly:',
+            subEn: [
+              'a. Red or "RA" lead goes to the right arm.',
+              'b. Black or "RL" lead to the right leg.',
+              'c. Green or "LL" lead to the left leg.',
+              'd. Yellow or "LA" lead to the left arm.'
+            ],
+            ar: 'تثبيت أقطاب الأطراف (Limb leads) مع توجيه وصلات الساقين لأعلى:',
+            subAr: [
+              'أ. الأحمر أو "RA" للذراع الأيمن.',
+              'ب. الأسود أو "RL" للساق اليمنى.',
+              'ج. الأخضر أو "LL" للساق اليسرى.',
+              'د. الأصفر أو "LA" للذراع الأيسر.'
+            ]
+          },
+          {
+            no: 12, marks: 6, phase: '2. Lead Placement & Tracing',
+            en: 'Apply electrode paste and attach electrodes to the chest:',
+            subEn: [
+              '- V1 - 4th intercostal space (ICS) at right sternal border.',
+              '- V2 - 4th ICS at left sternal border.',
+              '- V3 - Midway between V2 and V4.',
+              '- V4 - 5th ICS at midclavicular line.',
+              '- V5 - Left anterior axillary line at level of V4 horizontally.',
+              '- V6 - Left midaxillary line at level of V4 horizontally.'
+            ],
+            ar: 'وضع معجون/جل الأقطاب وتثبيت أقطاب الصدر:',
+            subAr: [
+              '- V1 في الفراغ الوربي الرابع يمين عظمة القص.',
+              '- V2 في الفراغ الوربي الرابع يسار عظمة القص.',
+              '- V3 في المنتصف بين V2 و V4.',
+              '- V4 في الفراغ الوربي الخامس عند خط منتصف الترقوة.',
+              '- V5 عند الخط الإبطي الأمامي الأيسر بمستوى V4 أفقياً.',
+              '- V6 عند الخط الإبطي الأوسط الأيسر بمستوى V4 أفقياً.'
+            ]
+          },
+          { no: 13, marks: 1, phase: '2. Lead Placement & Tracing', en: 'Attach lead wires to electrodes.', ar: 'توصيل أسلاك التوصيل (Lead wires) بالأقطاب المثبتة.' },
+          { no: 14, marks: 0.5, phase: '2. Lead Placement & Tracing', en: 'Obtain tracing by following the instructions from the physician.', ar: 'تسجيل تخطيط رسم القلب باتباع تعليمات الطبيب.' },
+          { no: 15, marks: 0.5, phase: '2. Lead Placement & Tracing', en: 'Inspect tracing for adequate quality.', ar: 'فحص ورقة التخطيط للتأكد من جودة ووضوح التسجيل.' },
+          { no: 16, marks: 1, phase: '3. Post-Procedure & Documentation', en: 'Remove leads and electrodes. Wipe paste from skin.', ar: 'إزالة الأسلاك والأقطاب ومسح بقايا المعجون/الجل من جلد المريض.' },
+          { no: 17, marks: 1, phase: '3. Post-Procedure & Documentation', en: 'Notify physician of abnormalities.', ar: 'إبلاغ الطبيب فوراً بأي قراءات غير طبيعية.' },
+          { no: 18, marks: 1, phase: '3. Post-Procedure & Documentation', en: 'Return machine and replace supplies.', ar: 'إعادة جهاز رسم القلب لمكانه وتعويض المستلزمات المستهلكة.' },
+          { no: 19, marks: 1, phase: '3. Post-Procedure & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 20, marks: 1, phase: '3. Post-Procedure & Documentation', en: 'Documentation.', ar: 'التوثيق والتسجيل في ملف المريض.' }
+        ]
+      },
+      {
+        id: 'intermittent_bolus',
+        shortName: 'Intermittent Bolus',
+        titleEn: 'Enteral feeding — Intermittent bolus',
+        titleAr: 'التغذية المعوية: الإعطاء المتقطع بالسرنجة (Intermittent Bolus)',
+        unit: 'Unit III',
+        pages: 'Pages 18–19',
+        totalMarks: 25,
+        icon: 'syringe',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Privacy', en: "Review patient's medical record for formula, amount, and time.", ar: 'مراجعة السجل الطبي للمريض للتأكد من نوع التركيبة الغذائية والكمية والوقت المحدد.' },
+          { no: 2, marks: 2, phase: '1. Preparation & Privacy', en: 'Hand washing and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 1, phase: '1. Preparation & Privacy', en: 'Gather equipment and formula.', ar: 'تجهيز الأدوات والتركيبة الغذائية.' },
+          { no: 4, marks: 1, phase: '1. Preparation & Privacy', en: "Check patient's arm band (identify patient).", ar: 'فحص سوار معصم المريض للتحقق من هويته.' },
+          { no: 5, marks: 1, phase: '1. Preparation & Privacy', en: 'Explain procedure to patient.', ar: 'شرح الإجراء للمريض.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Privacy', en: 'Assemble equipment on over bed table within reach.', ar: 'ترتيب وتجهيز الأدوات على طاولة السرير في متناول اليد.' },
+          { no: 7, marks: 1, phase: '1. Preparation & Privacy', en: 'Provide privacy.', ar: 'توفير الخصوصية للمريض.' },
+          { no: 8, marks: 2, phase: '2. Positioning & Residual Check', en: "Place patient on right side in high Fowler's position.", ar: "وضع المريض على الجانب الأيمن في وضع فاولر المرتفع (High Fowler's position)." },
+          { no: 9, marks: 2, phase: '2. Positioning & Residual Check', en: 'Observe for abdominal distention by auscultation of bowel sounds.', ar: 'ملاحظة وجود انتفاخ بالبطن من خلال سماع أصوات الأمعاء بالسماعة.' },
+          {
+            no: 10, marks: 3, phase: '2. Positioning & Residual Check',
+            en: 'Check feeding tube. Insert syringe into adapter port, aspirate stomach contents, and determine amount of gastric residual:',
+            subEn: [
+              '- If residual is greater than 50-100 ml (or in accordance with agency protocol), hold feeding until residual diminishes.',
+              '- Instill aspirated contents back into feeding tube.'
+            ],
+            ar: 'فحص أنبوبة التغذية وإدخال السرنجة وسحب محتويات المعدة لتحديد كمية المتبقي المعدي (Gastric residual):',
+            subAr: [
+              '- إذا كان المتبقي أكثر من 50–100 مل (أو حسب بروتوكول المستشفى) يتم إيقاف التغذية مؤقتاً حتى يقل المتبقي.',
+              '- إعادة حقن المحتويات المسحوبة مرة أخرى في أنبوبة التغذية.'
+            ]
+          },
+          { no: 11, marks: 2, phase: '3. Bolus Administration & Flushing', en: 'Pinch the tubing.', ar: 'ثني/قرص الأنبوبة بالأصابع لمنع دخول الهواء.' },
+          { no: 12, marks: 1, phase: '3. Bolus Administration & Flushing', en: 'Remove plunger from barrel of syringe and attach to adapter.', ar: 'إزالة مكبس السرنجة وتوصيل جسم السرنجة بوصلة الأنبوبة.' },
+          { no: 13, marks: 1, phase: '3. Bolus Administration & Flushing', en: 'Fill syringe with formula.', ar: 'ملء السرنجة بالتركيبة الغذائية.' },
+          { no: 14, marks: 1, phase: '3. Bolus Administration & Flushing', en: 'Allow formula to infuse slowly; continue adding formula to syringe until prescribed amount has been administered.', ar: 'السماح للتركيبة الغذائية بالتدفق ببطء، والاستمرار في إضافتها للسرنجة حتى إعطاء الكمية الموصوفة بالكامل.' },
+          { no: 15, marks: 2, phase: '3. Bolus Administration & Flushing', en: 'Flush tubing with 30–60 ml or prescribed amount of water.', ar: 'شطف الأنبوبة بكمية 30–60 مل من الماء أو الكمية الموصوفة.' },
+          { no: 16, marks: 2, phase: '4. Completion & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 17, marks: 1, phase: '4. Completion & Documentation', en: "Record total amount of formula and water administered on intake and output form and patient's response to feeding.", ar: 'تسجيل إجمالي كمية الغذاء والماء المعطاة في نموذج السوائل الداخلة والخارجة (I&O) وتسجيل استجابة المريض للتغذية.' }
+        ]
+      },
+      {
+        id: 'intermittent_gavage',
+        shortName: 'Intermittent Gavage',
+        titleEn: 'Intermittent gavage feeding',
+        titleAr: 'التغذية الأنبوبية المتقطعة بالتنقيط (Intermittent Gavage)',
+        unit: 'Unit III',
+        pages: 'Pages 20–21',
+        totalMarks: 25,
+        icon: 'droplets',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Privacy', en: "Review patient's medical record for formula, amount, and time.", ar: 'مراجعة السجل الطبي للمريض للتأكد من نوع التركيبة الغذائية والكمية والوقت المحدد.' },
+          { no: 2, marks: 2, phase: '1. Preparation & Privacy', en: 'Hand washing and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 1, phase: '1. Preparation & Privacy', en: 'Gather equipment and formula.', ar: 'تجهيز الأدوات والتركيبة الغذائية.' },
+          { no: 4, marks: 1, phase: '1. Preparation & Privacy', en: "Check patient's arm band (identify patient).", ar: 'فحص سوار معصم المريض للتحقق من هويته.' },
+          { no: 5, marks: 1, phase: '1. Preparation & Privacy', en: 'Explain procedure to patient.', ar: 'شرح الإجراء للمريض.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Privacy', en: 'Assemble equipment on over bed table within reach.', ar: 'ترتيب وتجهيز الأدوات على طاولة السرير في متناول اليد.' },
+          { no: 7, marks: 1, phase: '1. Preparation & Privacy', en: 'Provide privacy.', ar: 'توفير الخصوصية للمريض.' },
+          { no: 8, marks: 2, phase: '2. Positioning & Residual Check', en: "Place patient on right side in high Fowler's position.", ar: "وضع المريض على الجانب الأيمن في وضع فاولر المرتفع (High Fowler's position)." },
+          { no: 9, marks: 1, phase: '2. Positioning & Residual Check', en: 'Observe for abdominal distention by auscultation of bowel sounds.', ar: 'ملاحظة وجود انتفاخ بالبطن من خلال سماع أصوات الأمعاء بالسماعة.' },
+          {
+            no: 10, marks: 3, phase: '2. Positioning & Residual Check',
+            en: 'Check feeding tube. Insert syringe into adapter port, aspirate stomach contents, and determine amount of gastric residual:',
+            subEn: [
+              '- If residual is greater than 50-100 ml (or in accordance with agency protocol), hold feeding until residual diminishes.',
+              '- Instill aspirated contents back into feeding tube.'
+            ],
+            ar: 'فحص أنبوبة التغذية وإدخال السرنجة وسحب محتويات المعدة لتحديد كمية المتبقي المعدي (Gastric residual):',
+            subAr: [
+              '- إذا كان المتبقي أكثر من 50–100 مل (أو حسب بروتوكول المستشفى) يتم إيقاف التغذية مؤقتاً حتى يقل المتبقي.',
+              '- إعادة حقن المحتويات المسحوبة مرة أخرى في أنبوبة التغذية.'
+            ]
+          },
+          { no: 11, marks: 1.5, phase: '3. Gavage Bag Infusion', en: "Hang bag on IV pole so that it is 18 inches above the patient's head.", ar: 'تعليق كيس التغذية على حامل المحاليل بحيث يكون على ارتفاع 18 بوصة فوق رأس المريض.' },
+          { no: 12, marks: 1.5, phase: '3. Gavage Bag Infusion', en: "Remove air from bag's tubing.", ar: 'تفريغ الهواء من أنبوبة كيس التغذية.' },
+          { no: 13, marks: 2, phase: '3. Gavage Bag Infusion', en: 'Attach distal end of tubing to feeding tube adapter and adjust drip to infuse over prescribed time.', ar: 'توصيل الطرف البعيد لأنبوبة الكيس بوصلة أنبوبة التغذية وضبط معدل التنقيط ليتم التسريب خلال الوقت الموصوف.' },
+          { no: 14, marks: 2, phase: '3. Gavage Bag Infusion', en: 'When bag empties of formula, add 30-60 ml or prescribed amount of water; close clamp.', ar: 'عندما يفرغ الكيس من التركيبة الغذائية، أضف 30–60 مل من الماء أو الكمية الموصوفة، ثم أغلق المشبك.' },
+          { no: 15, marks: 1, phase: '4. Bag Care & Documentation', en: 'Wash reusable gavage bag with soap and hot water every 24 hours.', ar: 'غسل كيس التغذية القابل لإعادة الاستخدام بالماء الساخن والصابون كل 24 ساعة.' },
+          { no: 16, marks: 2, phase: '4. Bag Care & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 17, marks: 1, phase: '4. Bag Care & Documentation', en: "Record total amount of formula and water administered on intake and output form and patient's response to feeding.", ar: 'تسجيل إجمالي كمية الغذاء والماء المعطاة في نموذج السوائل الداخلة والخارجة (I&O) وتسجيل استجابة المريض للتغذية.' }
+        ]
+      },
+      {
+        id: 'ngt_removal',
+        shortName: 'NGT Removal',
+        titleEn: 'Removing a nasogastric tube (NGT Removal)',
+        titleAr: 'إزالة الأنبوب الأنفي المعدي (NGT Removal)',
+        unit: 'Unit III',
+        pages: 'Pages 24–25',
+        totalMarks: 25,
+        icon: 'scissors',
+        steps: [
+          { no: 1, marks: 1, phase: '1. Preparation & Privacy', en: 'Verify the medical order for removal of nasogastric tube.', ar: 'التحقق من الأمر الطبي الخاص بإزالة الأنبوبة الأنفي-معدية (NGT).' },
+          { no: 2, marks: 2, phase: '1. Preparation & Privacy', en: 'Hand washing and wear gloves.', ar: 'غسل اليدين وارتداء القفازات.' },
+          { no: 3, marks: 1, phase: '1. Preparation & Privacy', en: 'Prepare the equipment.', ar: 'تجهيز وتحضير الأدوات اللازمة.' },
+          { no: 4, marks: 1, phase: '1. Preparation & Privacy', en: 'Identify patient.', ar: 'التحقق من هوية المريض.' },
+          { no: 5, marks: 1, phase: '1. Preparation & Privacy', en: 'Introduce self and explain the procedure to the patient.', ar: 'تقديم النفس وشرح الإجراء للمريض.' },
+          { no: 6, marks: 1, phase: '1. Preparation & Privacy', en: 'Close curtains around bed and close the door to the room, if possible.', ar: 'إغلاق الستائر حول السرير وإغلاق باب الغرفة إن أمكن لتوفير الخصوصية.' },
+          { no: 7, marks: 1, phase: '2. Positioning & Tube Prep', en: 'Raise bed to a comfortable working position, usually elbow height of the caregiver.', ar: 'رفع السرير إلى مستوى مريح للعمل، وعادةً ما يكون بمستوى مرفق مقدم الرعاية.' },
+          { no: 8, marks: 1, phase: '2. Positioning & Tube Prep', en: 'Assist the patient to sitting position if health permits.', ar: 'مساعدة المريض في اتخاذ وضع الجلوس إذا سمحت حالته الصحية.' },
+          { no: 9, marks: 1, phase: '2. Positioning & Tube Prep', en: 'Place towel across the patient chest.', ar: 'وضع منشفة على صدر المريض.' },
+          { no: 10, marks: 1, phase: '2. Positioning & Tube Prep', en: "Unpin tube from patient's gown and carefully remove adhesive tape from patient's nose.", ar: 'فك تثبيت الأنبوبة من ملابس المريض وإزالة الشريط اللاصق من أنف المريض بحرص.' },
+          { no: 11, marks: 1, phase: '3. Tube Flushing & Withdrawal', en: 'Attach syringe and flush with 10 mL of water or normal saline solution (optional) or clear with 30 to 50 mL of air.', ar: 'توصيل السرنجة وشطف الأنبوبة بـ 10 مل من الماء أو المحلول الملحي (اختياري) أو تفريغها بـ 30 إلى 50 مل من الهواء.' },
+          { no: 12, marks: 2, phase: '3. Tube Flushing & Withdrawal', en: 'Clamp tube with fingers by doubling tube on itself.', ar: 'إغلاق الأنبوبة بالأصابع عن طريق ثنيها على نفسها.' },
+          { no: 13, marks: 1, phase: '3. Tube Flushing & Withdrawal', en: 'Instruct patient to take a deep breath and hold it.', ar: 'الطلب من المريض أخذ نفس عميق وحبسه.' },
+          { no: 14, marks: 1, phase: '3. Tube Flushing & Withdrawal', en: 'Quickly and carefully remove tube while patient holds breath.', ar: 'سحب وإزالة الأنبوبة بسرعة وحرص أثناء حبس المريض لنفسه.' },
+          { no: 15, marks: 1, phase: '3. Tube Flushing & Withdrawal', en: 'Smoothly withdraw the tube steadily and rapidly while patient exhales.', ar: 'سحب الأنبوبة بسلاسة وبشكل ثابت وسريع أثناء زفير المريض.' },
+          { no: 16, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: 'Place tube in a plastic bag.', ar: 'وضع الأنبوبة في كيس بلاستيكي.' },
+          { no: 17, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: 'Provide mouth care if desired.', ar: 'تقديم العناية بالفم للمريض إذا رغب في ذلك.' },
+          { no: 18, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: 'Assist the patient to blow the nose by used tissues.', ar: 'مساعدة المريض في تنظيف أنفه باستخدام المناديل الورقية.' },
+          { no: 19, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: 'Place the towel, tube, and gloves in the receptacle or container.', ar: 'وضع المنشفة والأنبوبة والقفازات في حاوية النفايات المخصصة.' },
+          { no: 20, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: 'Lower the bed and assist the patient to a position of comfort, as needed.', ar: 'خفض السرير ومساعدة المريض في اتخاذ وضعية مريحة حسب الحاجة.' },
+          { no: 21, marks: 2, phase: '4. Disposal, Comfort & Documentation', en: 'Remove gloves and wash hands.', ar: 'خلع القفازات وغسل اليدين.' },
+          { no: 22, marks: 1, phase: '4. Disposal, Comfort & Documentation', en: "Record the procedure in the patient's medical chart, including the time of removal, patient's tolerance, and any complications encountered.", ar: 'تسجيل الإجراء في الملف الطبي للمريض متضمناً وقت الإزالة، ومدى تحمل المريض، وأي مضاعفات حدثت.' }
+        ]
+      }
+    ];
+
+    // 2. ECG LEAD INFO FOR INTERACTIVE SVG
+    const ECG_PINS = {
+      RA: { title: 'RA — Red Lead (Right Arm)', ar: 'القطب الأحمر — يُوضع على الذراع الأيمن للمريض.' },
+      LA: { title: 'LA — Yellow Lead (Left Arm)', ar: 'القطب الأصفر — يُوضع على الذراع الأيسر للمريض.' },
+      RL: { title: 'RL — Black Lead (Right Leg)', ar: 'القطب الأسود — يُوضع على الساق اليمنى (الوصلة متجهة لأعلى).' },
+      LL: { title: 'LL — Green Lead (Left Leg)', ar: 'القطب الأخضر — يُوضع على الساق اليسرى (الوصلة متجهة لأعلى).' },
+      V1: { title: 'V1 — 4th ICS at right sternal border', ar: 'الفراغ الوربي الرابع عند الحافة اليمنى لعظمة القص.' },
+      V2: { title: 'V2 — 4th ICS at left sternal border', ar: 'الفراغ الوربي الرابع عند الحافة اليسرى لعظمة القص.' },
+      V3: { title: 'V3 — Midway between V2 and V4', ar: 'في منتصف المسافة تماماً بين V2 و V4.' },
+      V4: { title: 'V4 — 5th ICS at midclavicular line', ar: 'الفراغ الوربي الخامس عند خط منتصف الترقوة.' },
+      V5: { title: 'V5 — Left anterior axillary line (level of V4)', ar: 'الخط الإبطي الأمامي الأيسر على نفس المستوى الأفقي لـ V4.' },
+      V6: { title: 'V6 — Left midaxillary line (level of V4)', ar: 'الخط الإبطي الأوسط الأيسر على نفس المستوى الأفقي لـ V4.' }
+    };
+
+    // 3. KEY EXAM NUMBERS DATA
+    const KEY_NUMBERS = [
+      { num: '~5 min', label: 'Chest Percussion Duration', proc: 'Chest Physiotherapy (Step 14)', ar: 'مدة القرع على الصدر 5 دقائق تقريباً' },
+      { num: '~15 sec', label: 'Chest Vibration Duration', proc: 'Chest Physiotherapy (Step 15)', ar: 'اهتزاز الصدر أثناء الزفير بشفاه مزمومة' },
+      { num: '≥ 45°', label: 'Head of Bed Elevation', proc: 'Chest Physiotherapy (Step 19)', ar: 'رفع رأس السرير 45 درجة أو أكثر' },
+      { num: '≥ 3 sec', label: 'Sustain Inspiration', proc: 'Incentive Spirometer (Step 16)', ar: 'حبس الشهيق 3 ثوانٍ على الأقل' },
+      { num: '10–20× / 1–2h', label: 'Spirometer Schedule (72h)', proc: 'Incentive Spirometer (Step 17)', ar: 'تكرار 10–20 مرة كل 1–2 ساعة لمدة 72 ساعة' },
+      { num: '> 50–100 mL', label: 'Gastric Residual Limit', proc: 'Bolus & Gavage (Step 10)', ar: 'إيقاف التغذية مؤقتاً وإعادة المسحوب للمعدة' },
+      { num: '18 inches', label: 'Gavage Bag Height', proc: 'Intermittent Gavage (Step 11)', ar: 'تعليق كيس التغذية 18 بوصة فوق رأس المريض' },
+      { num: '30–60 mL', label: 'Tube Water Flush', proc: 'Bolus (15) & Gavage (14)', ar: 'شطف الأنبوبة بـ 30–60 مل من الماء' },
+      { num: 'Every 24h', label: 'Wash Reusable Gavage Bag', proc: 'Intermittent Gavage (Step 15)', ar: 'غسل كيس التغذية بالماء الساخن والصابون كل 24 ساعة' }
+    ];
+
+    // 4. 21-QUESTION MCQ EXAM (3 PER PROCEDURE)
+    const MCQ_QUESTIONS = [
+      // Chest Physiotherapy (3)
+      {
+        proc: 'chest_physio', procTitle: 'Chest Physiotherapy',
+        qEn: 'Which position drains the MIDDLE lobe of the lung during chest physiotherapy?',
+        qAr: 'ما هي الوضعية المستخدمة لتصريف الفص الأوسط (Middle lobe) للرئة؟',
+        options: [
+          'Sitting upright in bed or chair',
+          "Lying on back, tilted to left side in Trendelenburg's position",
+          "Lying in Trendelenburg's position on abdomen",
+          'Leaning forward in sitting position'
+        ],
+        correct: 1,
+        rationale: "Step 12 (1 Mark): Lying on back, tilted to left side in Trendelenburg's position targets right chest to drain the middle lobe."
+      },
+      {
+        proc: 'chest_physio', procTitle: 'Chest Physiotherapy',
+        qEn: 'How long should chest percussion be maintained in position, and how long is chest vibration repeated?',
+        qAr: 'كم تبلغ مدة القرع على الصدر، وكم تبلغ مدة تكرار اهتزاز جدار الصدر؟',
+        options: [
+          'Percussion: ~15 seconds; Vibration: ~5 minutes',
+          'Percussion: ~5 minutes; Vibration: ~15 seconds',
+          'Percussion: ~10 minutes; Vibration: ~1 minute',
+          'Percussion: ~3 minutes; Vibration: ~30 seconds'
+        ],
+        correct: 1,
+        rationale: 'Step 14 (1 Mark): Percussion takes approximately 5 minutes. Step 15 (1.5 Marks): Vibration during pursed-lip exhalation is repeated around 15 seconds.'
+      },
+      {
+        proc: 'chest_physio', procTitle: 'Chest Physiotherapy',
+        qEn: 'After chest physiotherapy and mouth care, how should the head of the bed be positioned (Step 19)?',
+        qAr: 'بعد الانتهاء من العلاج الطبيعي للصدر والعناية بالفم، كيف يُوضع رأس السرير؟',
+        options: [
+          'Flat at 0 degrees',
+          'Elevated 15 degrees',
+          'Elevated 45 degrees or more',
+          'Lowered in Trendelenburg position'
+        ],
+        correct: 2,
+        rationale: 'Step 19 (1 Mark): Position patient in bed with head of bed elevated 45 degrees or more.'
+      },
+
+      // Nebulizer (3)
+      {
+        proc: 'nebulizer', procTitle: 'Nebulizer',
+        qEn: 'How should a patient breathe when using a nebulizer mouthpiece versus a mask (Step 20 — 2 Marks)?',
+        qAr: 'كيف يتنفس المريض عند استخدام قطعة الفم مقابل القناع في جلسة النيبولايزر؟',
+        options: [
+          'Close lips around mouthpiece & breathe through mouth; with mask, breathe normally with mouth closed',
+          'Breathe through nose with mouthpiece; breathe through mouth with mask',
+          'Hold breath for 5 seconds after each breath with both devices',
+          'Breathe rapidly and shallowly through the mouth in both cases'
+        ],
+        correct: 0,
+        rationale: 'Step 20 (2 Marks): Close lips around mouthpiece and breathe through mouth; if using a mask, breathe normally with the mouth closed.'
+      },
+      {
+        proc: 'nebulizer', procTitle: 'Nebulizer',
+        qEn: 'When should the patient discontinue the nebulizer treatment (Step 21)?',
+        qAr: 'متى يتوقف المريض عن جلسة استنشاق النيبولايزر؟',
+        options: [
+          'After exactly 3 minutes',
+          'Until the patient can no longer see a mist on exhalation from the opposite end of the mouthpiece or in the mask',
+          'As soon as heart rate increases by 5 bpm',
+          'When half of the medication remains in the cup'
+        ],
+        correct: 1,
+        rationale: 'Step 21 (1 Mark): Continue treatment until the patient can no longer see a mist on exhalation from the opposite end of the mouthpiece or in the mask.'
+      },
+      {
+        proc: 'nebulizer', procTitle: 'Nebulizer',
+        qEn: 'How should the nebulizer cup and mouthpiece be cleaned after each use (Step 23)?',
+        qAr: 'كيف يتم تنظيف كوب النيبولايزر وقطعة الفم بعد كل استخدام؟',
+        options: [
+          'Wipe with a dry paper towel only',
+          'Cleanse with warm, soapy water, rinse and dry it after each use',
+          'Autoclave for 30 minutes',
+          'Discard immediately after single use'
+        ],
+        correct: 1,
+        rationale: 'Step 23 (1 Mark): Cleanse the nebulizer cup and mouthpiece with warm, soapy water. Rinse and dry it after each use.'
+      },
+
+      // Incentive Spirometer (3)
+      {
+        proc: 'spirometer', procTitle: 'Incentive Spirometer',
+        qEn: 'How does the nurse support a chest or abdominal surgical incision before spirometer use (Step 10)?',
+        qAr: 'كيف يدعم الممرض الجرح الجراحي في الصدر أو البطن قبل استخدام مقياس التنفس التحفيزي؟',
+        options: [
+          'Place a pillow or folded blanket over the chest or abdominal incision for splinting',
+          'Place the patient prone on the abdomen',
+          'Apply cold ice packs directly on the incision',
+          'Wrap an elastic bandage tightly around the neck'
+        ],
+        correct: 0,
+        rationale: 'Step 10 (1 Mark): Place a pillow or folded blanket over a chest or abdominal incision for splinting.'
+      },
+      {
+        proc: 'spirometer', procTitle: 'Incentive Spirometer',
+        qEn: 'How long should the patient sustain inspiration after inhaling slowly and deeply (Step 16)?',
+        qAr: 'كم ثانية يجب أن يحبس المريض الشهيق بعد أخذ نفس بطيء وعميق؟',
+        options: [
+          'At least 1 second',
+          'At least 3 seconds',
+          'At least 10 seconds',
+          'At least 20 seconds'
+        ],
+        correct: 1,
+        rationale: 'Step 16 (1 Mark): Sustain inspiration for at least 3 seconds & exhale slowly.'
+      },
+      {
+        proc: 'spirometer', procTitle: 'Incentive Spirometer',
+        qEn: 'What is the prescribed repetition frequency for the incentive spirometer (Step 17)?',
+        qAr: 'ما هو جدول التكرار الموصى به لاستخدام مقياس التنفس التحفيزي؟',
+        options: [
+          'Repeat 10 to 20 times every 1 to 2 hours while awake for 72 hours',
+          'Repeat 5 times once daily for 48 hours',
+          'Repeat 30 times every 6 hours while sleeping',
+          'Repeat 2 times every 4 hours for 24 hours'
+        ],
+        correct: 0,
+        rationale: 'Step 17 (1 Mark): Repeat 10 to 20 times every 1 to 2 hours while awake for 72 hours.'
+      },
+
+      // ECG (3)
+      {
+        proc: 'ecg', procTitle: 'ECG',
+        qEn: 'Which limb lead color corresponds to the LEFT LEG (LL), and which way do leg electrode connections point (Step 11)?',
+        qAr: 'ما هو لون قطب الساق اليسرى (LL)، وفي أي اتجاه تُوجّه وصلات الساقين؟',
+        options: [
+          'Red ("LL") pointing inferiorly',
+          'Green ("LL") pointing superiorly',
+          'Black ("LL") pointing superiorly',
+          'Yellow ("LL") pointing laterally'
+        ],
+        correct: 1,
+        rationale: 'Step 11 (4 Marks): Green or "LL" lead goes to the left leg, and leg electrodes are positioned with the lead connection pointing superiorly.'
+      },
+      {
+        proc: 'ecg', procTitle: 'ECG',
+        qEn: 'Where is chest lead V4 placed during a 12-lead ECG (Step 12 — 6 Marks)?',
+        qAr: 'أين يتم تثبيت قطب الصدر V4 في رسم القلب الكهربائي؟',
+        options: [
+          '4th intercostal space (ICS) at right sternal border',
+          '4th ICS at left sternal border',
+          '5th ICS at midclavicular line',
+          'Left midaxillary line at level of V4 horizontally'
+        ],
+        correct: 2,
+        rationale: 'Step 12 (6 Marks): V4 is placed at the 5th intercostal space (ICS) at the midclavicular line.'
+      },
+      {
+        proc: 'ecg', procTitle: 'ECG',
+        qEn: 'Where are chest leads V1 and V2 positioned (Step 12)?',
+        qAr: 'أين يتم وضع قطبي الصدر V1 و V2؟',
+        options: [
+          'V1: 4th ICS right sternal border; V2: 4th ICS left sternal border',
+          'V1: 5th ICS right sternal border; V2: 5th ICS left sternal border',
+          'V1: 2nd ICS right sternal border; V2: 2nd ICS left sternal border',
+          'V1: Midway between V2 and V4; V2: Anterior axillary line'
+        ],
+        correct: 0,
+        rationale: 'Step 12: V1 is at 4th ICS at right sternal border; V2 is at 4th ICS at left sternal border.'
+      },
+
+      // Intermittent Bolus (3)
+      {
+        proc: 'intermittent_bolus', procTitle: 'Intermittent Bolus',
+        qEn: 'In what position should the patient be placed before starting intermittent bolus feeding (Step 8 — 2 Marks)?',
+        qAr: 'ما هي الوضعية الصحيحة للمريض قبل بدء التغذية المعوية المتقطعة؟',
+        options: [
+          'Left side in supine position',
+          "Right side in high Fowler's position",
+          'Prone position',
+          "Left side in Trendelenburg's position"
+        ],
+        correct: 1,
+        rationale: "Step 8 (2 Marks): Place patient on right side in high Fowler's position."
+      },
+      {
+        proc: 'intermittent_bolus', procTitle: 'Intermittent Bolus',
+        qEn: 'What should the nurse do if gastric residual is greater than 50–100 mL (Step 10 — 3 Marks)?',
+        qAr: 'ما الإجراء المتخذ إذا كان المتبقي المعدي أكبر من 50–100 مل؟',
+        options: [
+          'Discard the aspirated fluid and immediately administer the formula',
+          'Hold feeding until residual diminishes, and instill aspirated contents back into feeding tube',
+          'Remove the feeding tube immediately',
+          'Dilute the formula with 200 mL of water and push rapidly'
+        ],
+        correct: 1,
+        rationale: 'Step 10 (3 Marks): If residual > 50–100 mL, hold feeding until residual diminishes, and instill aspirated contents back into the feeding tube.'
+      },
+      {
+        proc: 'intermittent_bolus', procTitle: 'Intermittent Bolus',
+        qEn: 'What step comes immediately before removing the plunger from the syringe barrel in Intermittent Bolus (Step 11 — 2 Marks)?',
+        qAr: 'ما الخطوة التي تسبق مباشرة إزالة مكبس السرنجة في طريقة Intermittent Bolus؟',
+        options: [
+          'Hang bag 18 inches above head',
+          'Pinch the tubing',
+          'Flush with 100 mL normal saline',
+          'Remove gloves and wash hands'
+        ],
+        correct: 1,
+        rationale: 'Step 11 (2 Marks): Pinch the tubing before removing the plunger and attaching the syringe barrel.'
+      },
+
+      // Intermittent Gavage (3)
+      {
+        proc: 'intermittent_gavage', procTitle: 'Intermittent Gavage',
+        qEn: 'At what height above the patient’s head should the gavage bag be hung on the IV pole (Step 11)?',
+        qAr: 'كم يبلغ ارتفاع تعليق كيس التغذية على حامل المحاليل فوق رأس المريض؟',
+        options: [
+          '6 inches above the head',
+          '12 inches above the head',
+          '18 inches above the patient’s head',
+          '30 inches above the patient’s head'
+        ],
+        correct: 2,
+        rationale: "Step 11 (1.5 Marks): Hang bag on IV pole so that it is 18 inches above the patient's head."
+      },
+      {
+        proc: 'intermittent_gavage', procTitle: 'Intermittent Gavage',
+        qEn: 'How much water is added when the gavage bag empties of formula before closing the clamp (Step 14 — 2 Marks)?',
+        qAr: 'كم تبلغ كمية الماء المضافة عند فراغ كيس التغذية قبل إغلاق المشبك؟',
+        options: [
+          '10 mL of water',
+          '30–60 mL or prescribed amount of water',
+          '120 mL of water',
+          '250 mL of water'
+        ],
+        correct: 1,
+        rationale: 'Step 14 (2 Marks): When bag empties of formula, add 30–60 mL or prescribed amount of water; close clamp.'
+      },
+      {
+        proc: 'intermittent_gavage', procTitle: 'Intermittent Gavage',
+        qEn: 'How often should a reusable gavage bag be washed with soap and hot water (Step 15)?',
+        qAr: 'كل كم ساعة يجب غسل كيس التغذية القابل لإعادة الاستخدام بالماء الساخن والصابون؟',
+        options: [
+          'Every 4 hours',
+          'Every 8 hours',
+          'Every 24 hours',
+          'Every 72 hours'
+        ],
+        correct: 2,
+        rationale: 'Step 15 (1 Mark): Wash reusable gavage bag with soap and hot water every 24 hours.'
+      },
+
+      // NGT Removal (3)
+      {
+        proc: 'ngt_removal', procTitle: 'NGT Removal',
+        qEn: 'How is the nasogastric tube cleared prior to clamping and removal (Step 11)?',
+        qAr: 'كيف يتم تفريغ الأنبوبة الأنفي-معدية قبل غلقها وسحبها؟',
+        options: [
+          'Flush with 10 mL of water or normal saline (optional) or clear with 30 to 50 mL of air',
+          'Flush with 150 mL of sterile water',
+          'Attach to high suction for 15 minutes',
+          'Do not clear or flush the tube'
+        ],
+        correct: 0,
+        rationale: 'Step 11 (1 Mark): Attach syringe and flush with 10 mL of water or normal saline solution (optional) or clear with 30 to 50 mL of air.'
+      },
+      {
+        proc: 'ngt_removal', procTitle: 'NGT Removal',
+        qEn: 'How should the nurse clamp the NGT before withdrawing it (Step 12 — 2 Marks)?',
+        qAr: 'كيف يقوم الممرض بغلق الأنبوبة الأنفي-معدية قبل سحبها؟',
+        options: [
+          'Clamp tube with fingers by doubling tube on itself',
+          'Use a surgical hemostat clamp',
+          'Tie a tight knot in the tubing',
+          'Plug the end with gauze'
+        ],
+        correct: 0,
+        rationale: 'Step 12 (2 Marks): Clamp tube with fingers by doubling tube on itself.'
+      },
+      {
+        proc: 'ngt_removal', procTitle: 'NGT Removal',
+        qEn: 'What breathing instruction is given to the patient when removing the NGT (Steps 13–14)?',
+        qAr: 'ما هي تعليمات التنفس التي تُعطى للمريض لحظة سحب الأنبوبة؟',
+        options: [
+          'Take a deep breath and hold it while the tube is quickly and carefully removed',
+          'Cough forcefully while the tube is pulled',
+          'Swallow water continuously during removal',
+          'Hyperventilate rapidly through the nose'
+        ],
+        correct: 0,
+        rationale: 'Steps 13–14: Instruct patient to take a deep breath and hold it, and quickly and carefully remove tube while patient holds breath.'
+      }
+    ];
+
+    // =========================================================================
+    // APPLICATION STATE & STORAGE
+    // =========================================================================
+    const STORAGE_KEY = 'adult1_practical_clean_v1';
+
+    let state = {
+      activeTab: 'study',
+      selectedProcId: 'chest_physio',
+      searchQuery: '',
+      hideArabic: false,
+      hideEnglish: false,
+      highMarksOnly: false,
+      mastered: JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'),
+      // Exam Tab State
+      examSubMode: 'rubric',
+      simProcId: 'chest_physio',
+      simChecked: {},
+      simBlind: false,
+      quizFilter: 'all',
+      quizIndex: 0,
+      quizAnswered: false,
+      quizSelected: null,
+      quizCorrect: 0,
+      quizWrong: 0
+    };
+
+    function saveMastered() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.mastered));
+    }
+
+    function stepKey(procId, stepNo) {
+      return `${procId}_${stepNo}`;
+    }
+
+    function getMasteredCount(proc) {
+      return proc.steps.filter(s => state.mastered[stepKey(proc.id, s.no)]).length;
+    }
+
+    // =========================================================================
+    // MAIN TAB NAVIGATION
+    // =========================================================================
+    document.querySelectorAll('.nav-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        state.activeTab = target;
+
+        document.querySelectorAll('.nav-tab').forEach(b => {
+          b.classList.remove('active', 'bg-slate-900', 'text-white');
+          b.classList.add('text-slate-600', 'hover:bg-slate-50', 'hover:text-slate-900');
+        });
+        btn.classList.add('active', 'bg-slate-900', 'text-white');
+        btn.classList.remove('text-slate-600', 'hover:bg-slate-50', 'hover:text-slate-900');
+
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+        document.getElementById(`tab-${target}`).classList.remove('hidden');
+      });
+    });
+
+    // =========================================================================
+    // TAB 1: PROCEDURES & STEPS RENDERING
+    // =========================================================================
+    function renderProcedurePills() {
+      const bar = document.getElementById('procedurePillsBar');
+      bar.innerHTML = PROCEDURES.map(proc => {
+        const active = proc.id === state.selectedProcId;
+        const done = getMasteredCount(proc);
+        const total = proc.steps.length;
+        const isComplete = done === total;
+
+        return `
+          <button
+            onclick="selectProcedure('${proc.id}')"
+            class="px-4 py-2.5 rounded-xl text-xs font-bold border transition whitespace-nowrap flex items-center gap-2 shrink-0 ${
+              active
+                ? 'bg-sky-600 text-white border-sky-600 shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+            }"
+          >
+            <i data-lucide="${proc.icon}" class="w-3.5 h-3.5"></i>
+            <span class="font-en">${proc.shortName}</span>
+            <span class="font-en px-1.5 py-0.5 rounded-md text-[10px] ${
+              active
+                ? 'bg-white/20 text-white'
+                : isComplete
+                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                : 'bg-slate-100 text-slate-600'
+            }">${isComplete ? '✓' : `${done}/${total}`}</span>
+          </button>
+        `;
+      }).join('');
+      lucide.createIcons();
+    }
+
+    window.selectProcedure = function(procId) {
+      state.selectedProcId = procId;
+      renderProcedurePills();
+      renderProcedureSteps();
+    };
+
+    window.toggleStepDone = function(procId, stepNo) {
+      const k = stepKey(procId, stepNo);
+      if (state.mastered[k]) {
+        delete state.mastered[k];
+      } else {
+        state.mastered[k] = true;
+      }
+      saveMastered();
+      renderProcedurePills();
+      renderProcedureSteps();
+    };
+
+    document.getElementById('markAllStepsBtn').addEventListener('click', () => {
+      const proc = PROCEDURES.find(p => p.id === state.selectedProcId);
+      if (!proc) return;
+      const allDone = getMasteredCount(proc) === proc.steps.length;
+
+      proc.steps.forEach(s => {
+        const k = stepKey(proc.id, s.no);
+        if (allDone) delete state.mastered[k];
+        else state.mastered[k] = true;
+      });
+
+      saveMastered();
+      renderProcedurePills();
+      renderProcedureSteps();
+    });
+
+    // Search & Filter Listeners
+    const stepSearchInput = document.getElementById('stepSearchInput');
+    const clearStepSearchBtn = document.getElementById('clearStepSearchBtn');
+
+    stepSearchInput.addEventListener('input', () => {
+      state.searchQuery = stepSearchInput.value.trim().toLowerCase();
+      clearStepSearchBtn.classList.toggle('hidden', !state.searchQuery);
+      renderProcedureSteps();
+    });
+
+    clearStepSearchBtn.addEventListener('click', () => {
+      stepSearchInput.value = '';
+      state.searchQuery = '';
+      clearStepSearchBtn.classList.add('hidden');
+      renderProcedureSteps();
+    });
+
+    document.getElementById('toggleArabicBtn').addEventListener('click', function() {
+      state.hideArabic = !state.hideArabic;
+      this.classList.toggle('bg-slate-900', state.hideArabic);
+      this.classList.toggle('text-white', state.hideArabic);
+      this.classList.toggle('border-slate-900', state.hideArabic);
+      renderProcedureSteps();
+    });
+
+    document.getElementById('toggleEnglishBtn').addEventListener('click', function() {
+      state.hideEnglish = !state.hideEnglish;
+      this.classList.toggle('bg-slate-900', state.hideEnglish);
+      this.classList.toggle('text-white', state.hideEnglish);
+      this.classList.toggle('border-slate-900', state.hideEnglish);
+      renderProcedureSteps();
+    });
+
+    document.getElementById('toggleHighMarksBtn').addEventListener('click', function() {
+      state.highMarksOnly = !state.highMarksOnly;
+      this.classList.toggle('bg-amber-50', state.highMarksOnly);
+      this.classList.toggle('border-amber-400', state.highMarksOnly);
+      this.classList.toggle('text-amber-900', state.highMarksOnly);
+      renderProcedureSteps();
+    });
+
+    function renderProcedureSteps() {
+      const proc = PROCEDURES.find(p => p.id === state.selectedProcId) || PROCEDURES[0];
+      const doneCount = getMasteredCount(proc);
+      const totalCount = proc.steps.length;
+      const pct = Math.round((doneCount / totalCount) * 100);
+
+      document.getElementById('procUnitBadge').textContent = proc.unit;
+      document.getElementById('procPagesBadge').textContent = `Logbook ${proc.pages}`;
+      document.getElementById('procTitleEn').textContent = proc.titleEn;
+      document.getElementById('procTitleAr').textContent = proc.titleAr;
+      document.getElementById('procProgressLabel').textContent = `${doneCount} / ${totalCount} (${pct}%)`;
+      document.getElementById('procProgressFill').style.width = `${pct}%`;
+
+      const markAllBtn = document.getElementById('markAllStepsBtn');
+      if (doneCount === totalCount) {
+        markAllBtn.innerHTML = `<i data-lucide="rotate-ccw" class="w-4 h-4"></i><span class="font-ar">إلغاء تحديد الكل</span>`;
+      } else {
+        markAllBtn.innerHTML = `<i data-lucide="check-check" class="w-4 h-4"></i><span class="font-ar">تحديد الكل كمحفوظ</span>`;
+      }
+
+      // Filter steps
+      let filtered = proc.steps;
+      if (state.highMarksOnly) {
+        filtered = filtered.filter(s => s.marks >= 1.5);
+      }
+      if (state.searchQuery) {
+        filtered = filtered.filter(s => {
+          const text = [s.en, s.ar, ...(s.subEn || []), ...(s.subAr || [])].join(' ').toLowerCase();
+          return text.includes(state.searchQuery);
+        });
+      }
+
+      const feed = document.getElementById('stepsFeedContainer');
+      if (filtered.length === 0) {
+        feed.innerHTML = `
+          <div class="bg-white rounded-2xl border border-slate-200 p-10 text-center space-y-1">
+            <p class="font-en text-sm font-bold text-slate-800">No matching steps found</p>
+            <p class="font-ar text-xs text-slate-500">جرب مسح عبارة البحث أو إلغاء الفلتر لعرض جميع الخطوات</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      // Group cleanly by phase header
+      let currentPhase = '';
+      let html = '';
+
+      filtered.forEach(step => {
+        if (step.phase !== currentPhase) {
+          currentPhase = step.phase;
+          html += `
+            <div class="pt-2 pb-1 flex items-center gap-3">
+              <span class="font-en text-xs font-extrabold uppercase tracking-wider text-slate-400">${currentPhase}</span>
+              <div class="flex-1 h-px bg-slate-200"></div>
+            </div>
+          `;
+        }
+
+        const isDone = !!state.mastered[stepKey(proc.id, step.no)];
+        const isHighMark = step.marks >= 1.5;
+
+        const subEnHtml = step.subEn
+          ? `<ul class="mt-3 space-y-1.5 pl-4 border-l-2 border-slate-200 text-sm text-slate-700 font-normal">
+              ${step.subEn.map(line => `<li>${line}</li>`).join('')}
+            </ul>`
+          : '';
+
+        const subArHtml = step.subAr
+          ? `<ul class="mt-2.5 space-y-1.5 pr-4 border-r-2 border-teal-200 text-sm text-teal-800 font-medium" dir="rtl">
+              ${step.subAr.map(line => `<li>${line}</li>`).join('')}
+            </ul>`
+          : '';
+
+        html += `
+          <article class="bg-white rounded-2xl border transition-all p-6 sm:p-7 space-y-4 ${
+            isDone
+              ? 'border-emerald-300 bg-emerald-50/20'
+              : 'border-slate-200 hover:border-slate-300'
+          }">
+            <!-- Top Row: Step Number, Mark Pill & Done Checkbox -->
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <span class="font-en text-xs font-extrabold px-2.5 py-1 rounded-lg ${
+                  isDone ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-800'
+                }">
+                  Step ${step.no}
+                </span>
+
+                <span class="font-en text-xs font-bold px-2.5 py-1 rounded-lg ${
+                  isHighMark
+                    ? 'bg-amber-50 text-amber-800 border border-amber-200'
+                    : 'bg-slate-50 text-slate-600 border border-slate-200/80'
+                }">
+                  ${step.marks} ${step.marks === 1 ? 'Mark' : 'Marks'}
+                </span>
+              </div>
+
+              <button
+                onclick="toggleStepDone('${proc.id}', ${step.no})"
+                aria-label="Mark step as completed"
+                class="w-8 h-8 rounded-xl border flex items-center justify-center transition ${
+                  isDone
+                    ? 'bg-emerald-600 border-emerald-600 text-white'
+                    : 'bg-white border-slate-300 text-transparent hover:border-slate-400'
+                }"
+              >
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- English Text -->
+            <div
+              onclick="this.classList.toggle('revealed')"
+              class="font-en text-[15px] sm:text-base font-semibold text-slate-900 leading-relaxed ${state.hideEnglish ? 'recall-blur' : ''}"
+            >
+              <div>${step.en}</div>
+              ${subEnHtml}
+            </div>
+
+            <!-- Arabic Translation Directly Underneath -->
+            <div
+              onclick="this.classList.toggle('revealed')"
+              dir="rtl"
+              class="pt-3.5 border-t border-slate-100 font-ar text-[15px] sm:text-base font-semibold text-teal-700 leading-relaxed text-right ${state.hideArabic ? 'recall-blur' : ''}"
+            >
+              <div>${step.ar}</div>
+              ${subArHtml}
+            </div>
+          </article>
+        `;
+      });
+
+      feed.innerHTML = html;
+      lucide.createIcons();
+    }
+
+    // =========================================================================
+    // TAB 2: VISUAL SUMMARIES INITIALIZATION
+    // =========================================================================
+    function initVisualSummaries() {
+      // Interactive ECG diagram pins
+      document.querySelectorAll('.ecg-pin').forEach(pin => {
+        pin.addEventListener('click', () => {
+          const info = ECG_PINS[pin.dataset.lead];
+          if (!info) return;
+          document.getElementById('ecgPinInfoBox').innerHTML = `
+            <p class="font-en text-xs sm:text-sm font-extrabold text-sky-700">${info.title}</p>
+            <p class="font-ar text-xs sm:text-sm font-semibold text-slate-800 mt-1" dir="rtl">${info.ar}</p>
+          `;
+        });
+      });
+
+      // Key Exam Numbers Grid
+      const grid = document.getElementById('keyNumbersGrid');
+      grid.innerHTML = KEY_NUMBERS.map(item => `
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+          <div class="font-en text-lg font-extrabold text-sky-700">${item.num}</div>
+          <div class="font-en text-xs font-bold text-slate-900">${item.label}</div>
+          <div class="font-en text-[11px] text-slate-500">${item.proc}</div>
+          <div class="font-ar text-xs font-semibold text-teal-700 pt-1.5 border-t border-slate-200/80" dir="rtl">${item.ar}</div>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================================
+    // TAB 3: MOCK EXAM & QUIZ
+    // =========================================================================
+    const subModeRubricBtn = document.getElementById('subModeRubricBtn');
+    const subModeQuizBtn = document.getElementById('subModeQuizBtn');
+    const rubricSimulatorBox = document.getElementById('rubricSimulatorBox');
+    const mcqQuizBox = document.getElementById('mcqQuizBox');
+
+    subModeRubricBtn.addEventListener('click', () => {
+      subModeRubricBtn.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-sky-600 text-white transition';
+      subModeQuizBtn.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition';
+      rubricSimulatorBox.classList.remove('hidden');
+      mcqQuizBox.classList.add('hidden');
+    });
+
+    subModeQuizBtn.addEventListener('click', () => {
+      subModeQuizBtn.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-sky-600 text-white transition';
+      subModeRubricBtn.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition';
+      mcqQuizBox.classList.remove('hidden');
+      rubricSimulatorBox.classList.add('hidden');
+    });
+
+    // Simulator Logic
+    function initSimulator() {
+      const sel = document.getElementById('simProcSelect');
+      sel.innerHTML = PROCEDURES.map(p => `<option value="${p.id}">${p.titleEn} (25 Marks)</option>`).join('');
+
+      sel.addEventListener('change', () => {
+        state.simProcId = sel.value;
+        state.simChecked = {};
+        renderSimulator();
+      });
+
+      document.getElementById('simBlindBtn').addEventListener('click', function() {
+        state.simBlind = !state.simBlind;
+        this.classList.toggle('bg-slate-900', state.simBlind);
+        this.classList.toggle('text-white', state.simBlind);
+        renderSimulator();
+      });
+
+      document.getElementById('simClearBtn').addEventListener('click', () => {
+        state.simChecked = {};
+        renderSimulator();
+      });
+
+      renderSimulator();
+    }
+
+    window.toggleSimCheck = function(stepNo) {
+      if (state.simChecked[stepNo]) delete state.simChecked[stepNo];
+      else state.simChecked[stepNo] = true;
+      renderSimulator();
+    };
+
+    function renderSimulator() {
+      const proc = PROCEDURES.find(p => p.id === state.simProcId) || PROCEDURES[0];
+      let earned = 0;
+      let checked = 0;
+      const missed = [];
+
+      proc.steps.forEach(s => {
+        if (state.simChecked[s.no]) {
+          earned += s.marks;
+          checked++;
+        } else {
+          missed.push(s);
+        }
+      });
+
+      const pct = Math.round((earned / proc.totalMarks) * 100);
+      document.getElementById('simScoreNum').textContent = earned % 1 === 0 ? earned : earned.toFixed(1);
+      document.getElementById('simCountText').textContent = `${checked} of ${proc.steps.length} steps checked`;
+      document.getElementById('simPctText').textContent = `${pct}%`;
+      document.getElementById('simBarFill').style.width = `${pct}%`;
+
+      let rating = 'Select completed steps below';
+      if (checked > 0) {
+        if (pct >= 90) rating = 'Excellent Performance (امتياز)';
+        else if (pct >= 80) rating = 'Very Good Performance (جيد جداً)';
+        else if (pct >= 65) rating = 'Pass / Good (جيد)';
+        else rating = 'Needs Review (راجع الخطوات المتبقية)';
+      }
+      document.getElementById('simRatingText').textContent = rating;
+
+      document.getElementById('simStepsList').innerHTML = proc.steps.map(s => {
+        const isChecked = !!state.simChecked[s.no];
+        return `
+          <div
+            onclick="toggleSimCheck(${s.no})"
+            class="cursor-pointer p-4 rounded-xl border transition flex items-start gap-3.5 ${
+              isChecked
+                ? 'bg-emerald-50/50 border-emerald-300'
+                : 'bg-slate-50/70 border-slate-200 hover:border-slate-300'
+            }"
+          >
+            <div class="w-6 h-6 rounded-lg border flex items-center justify-center shrink-0 mt-0.5 ${
+              isChecked ? 'bg-emerald-600 border-emerald-600 text-white' : 'bg-white border-slate-300 text-transparent'
+            }">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="font-en text-xs font-extrabold text-slate-700">Step ${s.no}</span>
+                <span class="font-en text-xs font-bold text-slate-600">${s.marks} ${s.marks === 1 ? 'Mark' : 'Marks'}</span>
+              </div>
+              <div class="${state.simBlind && !isChecked ? 'recall-blur' : ''}">
+                <p class="font-en text-sm font-semibold text-slate-900">${s.en}</p>
+                <p class="font-ar text-xs font-semibold text-teal-700 mt-1" dir="rtl">${s.ar}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const missedBox = document.getElementById('simMissedItems');
+      if (missed.length === 0) {
+        missedBox.innerHTML = `<p class="font-bold text-emerald-700">All steps completed! Full score: 25 / 25 Marks.</p>`;
+      } else {
+        missedBox.innerHTML = missed.map(s => `
+          <div>• <strong>Step ${s.no} (${s.marks} Mark):</strong> ${s.en}</div>
+        `).join('');
+      }
+      lucide.createIcons();
+    }
+
+    // MCQ Quiz Logic
+    function getFilteredMCQs() {
+      if (state.quizFilter === 'all') return MCQ_QUESTIONS;
+      return MCQ_QUESTIONS.filter(q => q.proc === state.quizFilter);
+    }
+
+    function initMCQQuiz() {
+      document.getElementById('quizProcFilter').addEventListener('change', function() {
+        state.quizFilter = this.value;
+        state.quizIndex = 0;
+        state.quizAnswered = false;
+        state.quizSelected = null;
+        state.quizCorrect = 0;
+        state.quizWrong = 0;
+        renderMCQQuiz();
+      });
+
+      document.getElementById('quizRestartBtn').addEventListener('click', () => {
+        state.quizIndex = 0;
+        state.quizAnswered = false;
+        state.quizSelected = null;
+        state.quizCorrect = 0;
+        state.quizWrong = 0;
+        renderMCQQuiz();
+      });
+
+      renderMCQQuiz();
+    }
+
+    window.selectMCQOption = function(idx) {
+      if (state.quizAnswered) return;
+      const list = getFilteredMCQs();
+      const q = list[state.quizIndex];
+
+      state.quizAnswered = true;
+      state.quizSelected = idx;
+      if (idx === q.correct) state.quizCorrect++;
+      else state.quizWrong++;
+      renderMCQQuiz();
+    };
+
+    window.goNextMCQ = function() {
+      state.quizIndex++;
+      state.quizAnswered = false;
+      state.quizSelected = null;
+      renderMCQQuiz();
+    };
+
+    function renderMCQQuiz() {
+      const list = getFilteredMCQs();
+      document.getElementById('quizScoreCorrect').textContent = state.quizCorrect;
+      document.getElementById('quizScoreWrong').textContent = state.quizWrong;
+
+      const area = document.getElementById('quizQuestionArea');
+
+      if (state.quizIndex >= list.length) {
+        const pct = Math.round((state.quizCorrect / list.length) * 100);
+        document.getElementById('quizProgressBadge').textContent = `Completed (${list.length}/${list.length})`;
+        area.innerHTML = `
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-3">
+            <div class="font-en text-2xl font-extrabold text-slate-900">Quiz Completed!</div>
+            <p class="font-en text-sm text-slate-600">Your Score: <strong class="text-sky-700">${state.quizCorrect} / ${list.length} (${pct}%)</strong></p>
+            <button onclick="document.getElementById('quizRestartBtn').click()" class="mt-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-white hover:bg-slate-800 transition">
+              Retake Quiz
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const q = list[state.quizIndex];
+      document.getElementById('quizProgressBadge').textContent = `Question ${state.quizIndex + 1} / ${list.length}`;
+      document.getElementById('quizProcLabel').textContent = q.procTitle;
+
+      area.innerHTML = `
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+          <p class="font-en text-base font-bold text-slate-900 leading-relaxed">${q.qEn}</p>
+          <p class="font-ar text-sm font-semibold text-teal-700 leading-relaxed" dir="rtl">${q.qAr}</p>
+        </div>
+
+        <div class="space-y-2.5">
+          ${q.options.map((opt, idx) => {
+            let cls = 'bg-white border-slate-200 hover:border-slate-300 text-slate-800';
+            let badge = `<span class="font-en w-7 h-7 rounded-lg bg-slate-100 text-slate-700 text-xs font-bold flex items-center justify-center shrink-0">${String.fromCharCode(65 + idx)}</span>`;
+
+            if (state.quizAnswered) {
+              if (idx === q.correct) {
+                cls = 'bg-emerald-50 border-emerald-500 text-emerald-950';
+                badge = `<span class="w-7 h-7 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">✓</span>`;
+              } else if (idx === state.quizSelected) {
+                cls = 'bg-rose-50 border-rose-500 text-rose-950';
+                badge = `<span class="w-7 h-7 rounded-lg bg-rose-600 text-white text-xs font-bold flex items-center justify-center shrink-0">✕</span>`;
+              } else {
+                cls = 'bg-white border-slate-200 opacity-55';
+              }
+            }
+
+            return `
+              <button
+                onclick="selectMCQOption(${idx})"
+                ${state.quizAnswered ? 'disabled' : ''}
+                class="w-full text-left p-4 rounded-xl border transition flex items-center gap-3.5 ${cls}"
+              >
+                ${badge}
+                <span class="font-en text-sm font-medium leading-snug">${opt}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        ${state.quizAnswered ? `
+          <div class="p-5 rounded-2xl bg-sky-50/70 border border-sky-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fade">
+            <div class="space-y-1">
+              <div class="font-en text-xs font-extrabold text-sky-900 uppercase tracking-wider">Logbook Reference</div>
+              <p class="font-en text-xs sm:text-sm text-slate-800 leading-relaxed">${q.rationale}</p>
+            </div>
+            <button onclick="goNextMCQ()" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shrink-0 transition">
+              ${state.quizIndex + 1 < list.length ? 'Next Question →' : 'See Final Score'}
+            </button>
+          </div>
+        ` : ''}
+      `;
+    }
+
+    // =========================================================================
+    // INITIALIZE APPLICATION
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProcedurePills();
+      renderProcedureSteps();
+      initVisualSummaries();
+      initSimulator();
+      initMCQQuiz();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
